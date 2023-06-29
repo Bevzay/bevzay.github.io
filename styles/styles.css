@@ -43,6 +43,11 @@
   display: block;
 }
 
+.welcome {
+  background-image: url("../images/BG Home Background.png");
+  background-position: center;
+  background-size: cover;
+}
 .welcome h1 {
   position: absolute;
   left: 50%;
@@ -84,12 +89,6 @@
     top: calc(35% + 0.390625vw);
     font-size: calc(70px + 0.390625vw);
   }
-}
-
-.home-banner {
-  background-image: url("../videos/1118488_Liquid_4k_Shiny_3840x2160.gif");
-  background-position: center;
-  background-size: cover;
 }
 
 .heading-banner {

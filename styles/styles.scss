@@ -41,6 +41,9 @@
 }
 
 .welcome {
+    background-image: url("../images/BG\ Home\ Background.png");
+    background-position: center;
+    background-size: cover;
 
     h1 {
         position: absolute;
@@ -79,12 +82,6 @@
         }
 
     }
-}
-
-.home-banner {
-    background-image: url("../videos/1118488_Liquid_4k_Shiny_3840x2160.gif");
-    background-position: center;
-    background-size: cover;
 }
 
 .heading-banner {
