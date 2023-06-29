@@ -44,6 +44,13 @@
     background-image: url("../images/BG\ Home\ Background.png");
     background-position: center;
     background-size: cover;
+
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
 
 .heading-banner {

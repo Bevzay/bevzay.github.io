@@ -48,6 +48,12 @@
   background-position: center;
   background-size: cover;
 }
+.welcome .centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .heading-banner {
   background-image: url("../images/BG Service Projects & About.png");
