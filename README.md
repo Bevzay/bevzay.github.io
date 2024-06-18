@@ -1,5 +1,8 @@
 # Beverly Ann Gupit's website
 
+## Version 5.0
+Revised with CRO and basic UX/UI
+
 ## Version 4.0
 Updated fonts, colours, logo, images, and style
 
