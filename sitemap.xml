@@ -9,7 +9,163 @@
 
 <url>
   <loc>https://bevzay.github.io/</loc>
-  <lastmod>2022-01-20T03:50:20+00:00</lastmod>
+  <lastmod>2024-06-18T11:52:54+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://bevzay.github.io/index.html</loc>
+  <lastmod>2024-06-18T11:52:54+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bevzay.github.io/pages/about.html</loc>
+  <lastmod>2024-06-18T11:52:54+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bevzay.github.io/pages/services.html</loc>
+  <lastmod>2024-06-18T11:52:54+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bevzay.github.io/pages/portfolio.html</loc>
+  <lastmod>2024-06-18T11:52:54+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bevzay.github.io/pages/contact.html</loc>
+  <lastmod>2024-06-18T11:52:54+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bevzay.github.io/pages/terms%20and%20conditions.html</loc>
+  <lastmod>2024-06-18T11:52:54+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bevzay.github.io/pages/privacy%20policy.html</loc>
+  <lastmod>2024-06-18T11:52:54+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bevzay.github.io/website-ver1/</loc>
+  <lastmod>2023-03-04T10:47:15+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bevzay.github.io/website-ver2/</loc>
+  <lastmod>2023-03-08T09:14:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bevzay.github.io/website-ver3/</loc>
+  <lastmod>2023-03-27T03:10:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bevzay.github.io/website-ver4/</loc>
+  <lastmod>2024-06-18T05:03:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bevzay.github.io/website-ver2/pages/ecommerce-service.html</loc>
+  <lastmod>2023-03-08T09:14:39+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevzay.github.io/website-ver2/pages/contentcreation-service.html</loc>
+  <lastmod>2023-03-08T09:14:39+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevzay.github.io/website-ver2/pages/socialmediamarketing-service.html</loc>
+  <lastmod>2023-03-08T09:14:39+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevzay.github.io/website-ver2/pages/emailautomation-service.html</loc>
+  <lastmod>2023-03-08T09:14:39+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevzay.github.io/website-ver2/pages/webanalytics-service.html</loc>
+  <lastmod>2023-03-08T09:14:39+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevzay.github.io/website-ver3/index.html</loc>
+  <lastmod>2023-03-27T03:10:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevzay.github.io/website-ver3/pages/service.html</loc>
+  <lastmod>2023-03-27T03:10:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevzay.github.io/website-ver3/pages/project.html</loc>
+  <lastmod>2023-03-27T03:10:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevzay.github.io/website-ver3/pages/about.html</loc>
+  <lastmod>2023-03-27T03:10:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevzay.github.io/website-ver3/pages/contact.html</loc>
+  <lastmod>2023-03-27T03:10:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevzay.github.io/website-ver3/pages/privacy-policy.html</loc>
+  <lastmod>2023-03-27T03:10:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevzay.github.io/website-ver3/pages/terms-and-conditions.html</loc>
+  <lastmod>2023-03-27T03:10:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevzay.github.io/website-ver4/index.html</loc>
+  <lastmod>2024-06-18T05:03:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevzay.github.io/website-ver4/pages/service.html</loc>
+  <lastmod>2024-06-18T05:03:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevzay.github.io/website-ver4/pages/project.html</loc>
+  <lastmod>2024-06-18T05:03:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevzay.github.io/website-ver4/pages/about.html</loc>
+  <lastmod>2024-06-18T05:03:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevzay.github.io/website-ver4/pages/contact.html</loc>
+  <lastmod>2024-06-18T05:03:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevzay.github.io/website-ver4/pages/privacy-policy.html</loc>
+  <lastmod>2024-06-18T05:03:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevzay.github.io/website-ver4/pages/terms-and-conditions.html</loc>
+  <lastmod>2024-06-18T05:03:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevzay.github.io/website-ver2/index.html</loc>
+  <lastmod>2023-03-08T09:14:39+00:00</lastmod>
+  <priority>0.41</priority>
 </url>
 
 
