@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Beverly Ann Gupit</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../images/BG Website Icon_Logogram.svg" type="image/x-icon">
+
+    <!-- tailwind css -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+
+    <!-- bootstrap v5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- font awsome -->
+    <script src="https://kit.fontawesome.com/e9c86d33df.js" crossorigin="anonymous"></script>
+
+    <!-- local css -->
+    <link rel="stylesheet" href="../style/styles.css">
+</head>
+<body class="scroll-smooth dark-mode transition duration-500 ease-in-out selection:bg-gray-400/50">
+
+    <!-- navbar -->
+    <nav class="fixed-top shadow-md/20 font-[Poppins]">
+        <div class="px-2">
+            <div class="flex flex-row container-fluid py-4">
+                <div class="flex basis-2/3 justify-items-start">
+                    <a href="../index.html">
+                        <img src="../images/horizontal logo_white.png" alt="logo" width="160px" id="myLogo">
+                    </a>
+                </div>
+                <div class="flex basis-1/3 justify-end gap-4">
+                    <!-- dropdown dark/light mode btn -->
+                    <div class="dropdown">
+                        <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="../images/night.png" id="dayNightLogo" alt="toggle theme" width="24px" class="mt-2">
+                        </button>
+                        <ul class="dropdown-menu dark-mode">
+                            <li>
+                                <button id="lightBtn" class="dropdown-item dark-mode transition duration-500 ease-in-out">
+                                    Light mode
+                                </button>
+                            </li>
+                            <li>
+                                <button id="darkBtn" class="dropdown-item dark-mode transition duration-500 ease-in-out">
+                                    Dark mode
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- offcanvas menu btn -->
+                    <div>
+                        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+                            <img src="../images/menu_white.png" id="myMenu" alt="menu" width="24px" class="mt-2">
+                        </button>
+                        <div class="offcanvas offcanvas-end dark-mode" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+                            <div class="offcanvas-header flex justify-end">
+                                <button data-bs-dismiss="offcanvas" aria-label="Close">
+                                    <img src="../images/close_white.png" alt="close" width="24px" class="m-3">
+                                </button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div class="grid px-6">
+                                    <div class="grid py-20 justify-items-center">
+                                        <p class="fw-bold text-center">
+                                            E-commerce & Service-based Admin Specialist
+                                        </p>
+                                        <p class="text-neutral-400">
+                                            New Plymouth, Taranaki · NZ
+                                        </p>
+                                        <p>
+                                            <a href="https://www.linkedin.com/in/beverly-ann-gupit/" target="_blank" title="Let's connect">
+                                                <i class="fa-brands fa-linkedin dark-mode-text px-2 text-xl"></i>
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <a href="#" class="rounded-md grid transition duration-200 ease-in-out hover:bg-neutral-900 hover:scale-105">
+                                        <div class="p-2">
+                                            Home
+                                        </div>
+                                    </a>
+                                    <a href="#services" class="rounded-md grid transition duration-200 ease-in-out hover:bg-neutral-900 hover:scale-105">
+                                        <div class="p-2">
+                                            Services
+                                        </div>
+                                    </a>
+                                    <a href="#about" class="rounded-md grid transition duration-200 ease-in-out hover:bg-neutral-900 hover:scale-105">
+                                        <div class="p-2">
+                                            About
+                                        </div>
+                                    </a>
+                                    <a href="#projects" class="rounded-md grid transition duration-200 ease-in-out hover:bg-neutral-900 hover:scale-105">
+                                        <div class="p-2">
+                                            Projects
+                                        </div>
+                                    </a>
+                                    <a href="#testimonials" class="rounded-md grid transition duration-200 ease-in-out hover:bg-neutral-900 hover:scale-105">
+                                        <div class="p-2">
+                                            Testimonials
+                                        </div>
+                                    </a>
+                                    <a href="#pricing" class="rounded-md grid transition duration-200 ease-in-out hover:bg-neutral-900 hover:scale-105">
+                                        <div class="p-2">
+                                            Pricing
+                                        </div>
+                                    </a>
+                                    <a href="#contact" class="rounded-md grid transition duration-200 ease-in-out hover:bg-neutral-900 hover:scale-105">
+                                        <div class="p-2">
+                                            Contact
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- privacy policy -->
+    <div class="py-40 font-[Poppins] container-fluid lg:container">
+        <h1 class="fw-bold font-[Unbounded] display-3">
+            Privacy Policy
+        </h1>
+        <p class="text-neutral-400">
+            Effective Date: 4 August 2026
+        </p>
+        <div class="p-10">
+            <p>
+                This Privacy Policy explains how Beverly Ann Gupit collects, uses, and protects your personal information when you visit our website or use our services.
+            </p>
+            <p>
+                By using our Site, you agree to the collection and use of information in accordance with this Privacy Policy. This Policy applies in addition to our <a href="./terms.html" class="dark-mode-text">Terms and Conditions</a>.
+            </p>
+            <br class="my-3">
+            <h2 class="fw-bold font-[Unbounded]">
+                Consent
+            </h2>
+            <p>
+                By using our Site, you consent to:
+            </p>
+            <p>
+                <i class="fa-solid fa-circle scale-40 dark-mode-text mr-2"></i>
+                <span>
+                    The conditions set out in this Privacy Policy
+                </span>
+                <br/>
+                <i class="fa-solid fa-circle scale-40 dark-mode-text mr-2"></i>
+                <span>
+                    The collection, use, and retention of your personal data as described below
+                </span>
+            </p>
+            <br class="my-3">
+            <h2 class="fw-bold font-[Unbounded]">
+                Personal Data We Collect
+            </h2>
+            <p>
+                We only collect data that helps us achieve the purpose set out in this Privacy Policy. We will not collect any additional data without notifying you first.
+            </p>
+            <p>
+                If you choose not to provide us with the personal data listed below, we may not be able to respond to your enquiry or provide you with the information you have requested.
+            </p>
+            <br class="my-3">
+            <h2 class="fw-bold font-[Unbounded]">
+                Non-Automatic Data Collection
+            </h2>
+            <p>
+                We collect the following data when you perform certain functions on our Site:
+            </p>
+            <p>
+                <i class="fa-solid fa-circle scale-40 dark-mode-text mr-2"></i>
+                <span>
+                    <b>First and last name: </b> to address you personally
+                </span>
+                <br/>
+                <i class="fa-solid fa-circle scale-40 dark-mode-text mr-2"></i>
+                <span>
+                    <b>Email address: </b> to respond to your enquiry
+                </span>
+                <br/>
+                <i class="fa-solid fa-circle scale-40 dark-mode-text mr-2"></i>
+                <span>
+                    <b>Business name: </b> to understand your business context
+                </span>
+                <br/>
+                <i class="fa-solid fa-circle scale-40 dark-mode-text mr-2"></i>
+                <span>
+                    <b>Message or enquiry details: </b> to understand your admin challenges and respond appropriately
+                </span>
+            </p>
+            <p>
+                <span class="fw-bold">
+                    Method of collection:
+                </span>
+                This data is collected when you voluntarily fill out our contact form or send us an email.
+            </p>
+            <br class="my-3">
+            <h2 class="fw-bold font-[Unbounded]">
+                How We Use Personal Data
+            </h2>
+            <p>
+                Data collected on our Site will only be used for the purposes specified below. We will not use your data beyond what we disclose in this Privacy Policy.
+            </p>
+            <p>
+                The data we collect may be used for the following purposes:
+            </p>
+            <p>
+                <i class="fa-solid fa-circle scale-40 dark-mode-text mr-2"></i>
+                <span>
+                    To identify your business when responding to enquiries
+                </span>
+                <br/>
+                <i class="fa-solid fa-circle scale-40 dark-mode-text mr-2"></i>
+                <span>
+                    To tailor service recommendations to your specific needs
+                </span>
+                <br/>
+                <i class="fa-solid fa-circle scale-40 dark-mode-text mr-2"></i>
+                <span>
+                    To understand your admin challenges and respond with relevant information
+                </span>
+                <br/>
+                <i class="fa-solid fa-circle scale-40 dark-mode-text mr-2"></i>
+                <span>
+                    To communicate with you about potential projects
+                </span>
+            </p>
+            <br class="my-3">
+            <h2 class="fw-bold font-[Unbounded]">
+                Who We Share Personal Data With
+            </h2>
+            <h3 class="font-[Unbounded]">
+                Employees
+            </h3>
+            <p>
+                As a solo freelancer, I am the only person with access to your personal data.
+            </p>
+            <h3 class="font-[Unbounded]">
+                Other Disclosures
+            </h3>
+            <p>
+                We will not sell or share your data with third parties, except in the following cases:
+            </p>
+            <p>
+                <i class="fa-solid fa-circle scale-40 dark-mode-text mr-2"></i>
+                <span>
+                    If the law requires it
+                </span>
+                <br/>
+                <i class="fa-solid fa-circle scale-40 dark-mode-text mr-2"></i>
+                <span>
+                    If it is required for any legal proceeding
+                </span>
+                <br/>
+                <i class="fa-solid fa-circle scale-40 dark-mode-text mr-2"></i>
+                <span>
+                    To prove or protect our legal rights
+                </span>
+                <br/>
+                <i class="fa-solid fa-circle scale-40 dark-mode-text mr-2"></i>
+                <span>
+                    To buyers or potential buyers of this business in the event we seek to sell the company
+                </span>
+            </p>
+            <h3 class="font-[Unbounded]">
+                Third-Party Links
+            </h3>
+            <p>
+                Our Site contains links to third-party websites (including LinkedIn). We are not responsible for and have no control over their privacy policies and practices. We encourage you to read the privacy policies of any third-party sites you visit.
+            </p>
+            <br class="my-3">
+            <h2 class="fw-bold font-[Unbounded]">
+                How Long We Store Personal Data
+            </h2>
+            <p>
+                We keep your personal information only for as long as necessary to respond to your enquiry and provide our services.
+            </p>
+            <p class="p-4 secondary-dark-mode rounded-md">
+                <span class="fw-bold">Retention period:</span> If we have not received any communication from you for <span class="fw-bold">12 months</span> (one year) from the date of your last contact, we will delete your personal information from our records.
+            </p>
+            <p>
+                You may also request that we delete your personal information at any time by contacting us (see contact details below).
+            </p>
+            <br class="my-3">
+            <h2 class="fw-bold font-[Unbounded]">
+                Your Rights Under the NZ Privacy Act 2020
+            </h2>
+            <p>
+                Under the New Zealand Privacy Act 2020, you have the right to:
+            </p>
+            <p>
+                <i class="fa-solid fa-circle scale-40 dark-mode-text mr-2"></i>
+                <span>
+                    <b>Access: </b>Request access to the personal information we hold about you
+                </span>
+                <br/>
+                <i class="fa-solid fa-circle scale-40 dark-mode-text mr-2"></i>
+                <span>
+                    <b>Correction: </b>Request correction of any incorrect or incomplete information
+                </span>
+                <br/>
+                <i class="fa-solid fa-circle scale-40 dark-mode-text mr-2"></i>
+                <span>
+                    <b>Delection: </b>Request deletion of your personal information
+                </span>
+                <br/>
+                <i class="fa-solid fa-circle scale-40 dark-mode-text mr-2"></i>
+                <span>
+                    <b>Challenge: </b>Challenge the way we have handled your personal information
+                </span>
+            </p>
+            <p>
+                To exercise any of these rights, please contact our Privacy Officer (see contact details below).
+            </p>
+            <br class="my-3">
+            <h2 class="fw-bold font-[Unbounded]">
+                How We Protect Your Personal Data
+            </h2>
+            <p>
+                We take reasonable steps to protect your personal information from misuse, interference, loss, and unauthorised access, modification, or disclosure.
+            </p>
+            <p>
+                Personal information collected through our contact form and email enquiries is stored securely in <span class="fw-bold">Google Drive</span>, which is protected by industry-standard encryption (TLS/SSL) and requires secure login credentials to access.
+            </p>
+            <p>
+                Only Beverly Ann Gupit (the business owner) has access to this information. We do not share, sell, or transfer your personal information to any third parties.
+            </p>
+            <p>
+                While we take all reasonable precautions, the Internet as a whole is not always secure. Therefore, we are unable to guarantee the security of user data beyond what is reasonably practical.
+            </p>
+            <br class="my-3">
+            <h2 class="fw-bold font-[Unbounded]">
+                International Data Transfers
+            </h2>
+            <p>
+                We do not disclose your personal information to overseas recipients. However, please note that data may be stored on cloud platforms (such as Google Drive) that have servers located outside New Zealand. These platforms comply with industry-standard security practices.
+            </p>
+            <br class="my-3">
+            <h2 class="fw-bold font-[Unbounded]">
+                Children
+            </h2>
+            <p>
+                We do not knowingly collect or use personal data from children under 16 years of age. If we learn that we have collected personal data from a child under 16, that data will be deleted as soon as possible. If a child under 16 has provided us with personal data, their parent or guardian may contact our Privacy Officer.
+            </p>
+            <br class="my-3">
+            <h2 class="fw-bold font-[Unbounded]">
+                Modifications
+            </h2>
+            <p>
+                This Privacy Policy may be amended from time to time to maintain compliance with the law and to reflect any changes to our data collection process. When we amend this Privacy Policy, we will update the "Effective Date" at the top of this page. We recommend that you periodically review this Privacy Policy to stay informed of any updates. If necessary, we may notify you by email of significant changes.
+            </p>
+            <br class="my-3">
+            <hr class="border-2">
+            <br class="my-3">
+            <h2 class="fw-bold font-[Unbounded]">
+                Contact Information
+            </h2>
+            <p>
+                If you have any questions, concerns, or complaints about this Privacy Policy or how we handle your personal information, please contact our Privacy Officer:
+            </p>
+            <p class="p-4 secondary-dark-mode rounded-md">
+                <span>
+                    <b>Privacy Officer:</b> Beverly Ann Gupit
+                </span>
+                <br>
+                <span>
+                    <b>Email:</b>
+                    <a href="mailto:hello.beverlydigitaldoer@gmail.com?subject=General%20Enquiry">
+                        hello.beverlydigitaldoer@gmail.com
+                    </a>
+                </span>
+                <br>
+                <span>
+                    <b>Location:</b> New Plymouth, Taranaki, New Zealand
+                </span>
+            </p>
+            <p>
+                You can also contact us through the <a href="../index.html#contact" class="dark-mode-text">contact form</a> available on our Site.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        const body = document.body;
+        const lightBtn = document.getElementById('lightBtn');
+        const darkBtn = document.getElementById('darkBtn');
+
+        // Images
+        const logo = document.getElementById('myLogo');
+        const dayNight = document.getElementById('dayNightLogo');
+        const menu = document.getElementById('myMenu');
+
+        // ===  theme toggle ===
+        function setTheme(theme) {
+            if (theme === 'light') {
+
+                body.classList.replace('dark-mode', 'light-mode');
+
+                // Replace secondary-dark-mode → secondary-light-mode
+                document.querySelectorAll('.secondary-dark-mode').forEach(function (el) {
+                    el.classList.replace('secondary-dark-mode', 'secondary-light-mode');
+                });
+
+                // Replace dark-mode-text → light-mode-text
+                document.querySelectorAll('.dark-mode-text').forEach(function (el) {
+                    el.classList.replace('dark-mode-text', 'light-mode-text');
+                });
+
+                // Replace dark-mode-btn → light-mode-btn
+                document.querySelectorAll('.dark-mode-btn').forEach(function (el) {
+                    el.classList.replace('dark-mode-btn', 'light-mode-btn');
+                });
+
+                // Replace dark-box → light-box
+                document.querySelectorAll('.dark-box').forEach(function (el) {
+                    el.classList.replace('dark-box', 'light-box');
+                    el.classList.replace('hover:shadow-[#fda4af]', 'hover:shadow-[#8b5cf6]');
+                });
+
+                // Replace profile-dark → profile-light
+                document.querySelectorAll('.profile-dark').forEach(function (el) {
+                    el.classList.replace('profile-dark', 'profile-light');
+                });
+
+                // Replace popular-dark-box → popular-light-box
+                document.querySelectorAll('.popular-dark-box').forEach(function (el) {
+                    el.classList.replace('popular-dark-box', 'popular-light-box');
+                    el.classList.replace('shadow-[#fda4af]', 'shadow-[#8b5cf6]');
+                });
+
+                // Replace bg-neutral-800 → bg-neutral-200
+                document.querySelectorAll('.bg-neutral-800').forEach(function (el) {
+                    el.classList.replace('bg-neutral-800', 'bg-neutral-200');
+                });
+
+                // Replace dark-service-btn → light-service-btn
+                document.querySelectorAll('.dark-service-btn').forEach(function (el) {
+                    el.classList.replace('dark-service-btn', 'light-service-btn');
+                });
+
+                // Images
+                if (logo) logo.src = '../images/horizontal logo_black.png';
+                if (dayNight) dayNight.src = '../images/day.png';
+                if (menu) menu.src = '../images/menu_black.png';
+
+            } else {
+
+                body.classList.replace('light-mode', 'dark-mode');
+
+                // Replace secondary-light-mode → secondary-dark-mode
+                document.querySelectorAll('.secondary-light-mode').forEach(function (el) {
+                    el.classList.replace('secondary-light-mode', 'secondary-dark-mode');
+                });
+
+                // Replace light-mode-text → dark-mode-text
+                document.querySelectorAll('.light-mode-text').forEach(function (el) {
+                    el.classList.replace('light-mode-text', 'dark-mode-text');
+                });
+
+                // Replace light-mode-btn → dark-mode-btn
+                document.querySelectorAll('.light-mode-btn').forEach(function (el) {
+                    el.classList.replace('light-mode-btn', 'dark-mode-btn');
+                });
+
+                // Replace light-box → dark-box
+                document.querySelectorAll('.light-box').forEach(function (el) {
+                    el.classList.replace('light-box', 'dark-box');
+                    el.classList.replace('hover:shadow-[#8b5cf6]', 'hover:shadow-[#fda4af]');
+                });
+
+                //Replace profile-light → profile-dark
+                document.querySelectorAll('.profile-light').forEach(function (el) {
+                    el.classList.replace('profile-light', 'profile-dark');
+                });
+
+                //Replace popular-light-box → popular-dark-box
+                document.querySelectorAll('.popular-light-box').forEach(function (el) {
+                    el.classList.replace('popular-light-box', 'popular-dark-box');
+                    el.classList.replace('shadow-[#8b5cf6]', 'shadow-[#fda4af]');
+                });
+
+                // Replace bg-neutral-200 → bg-neutral-800
+                document.querySelectorAll('.bg-neutral-200').forEach(function (el) {
+                    el.classList.replace('bg-neutral-200', 'bg-neutral-800');
+                });
+
+                // Replace light-service-btn → dark-service-btn
+                document.querySelectorAll('.light-service-btn').forEach(function (el) {
+                    el.classList.replace('light-service-btn', 'dark-service-btn');
+                });
+
+                // Images
+                if (logo) logo.src = '../images/horizontal logo_white.png';
+                if (dayNight) dayNight.src = '../images/night.png';
+                if (menu) menu.src = '../images/menu_white.png';
+
+            }
+        }
+
+        if (lightBtn) {
+            lightBtn.addEventListener('click', function () {
+                setTheme('light');
+            });
+        }
+
+        if (darkBtn) {
+            darkBtn.addEventListener('click', function () {
+                setTheme('dark');
+            })
+        }
+
+
+        // === auto-year in footer ===
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    </script>
+</body>
+</html>

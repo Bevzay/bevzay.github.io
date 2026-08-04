@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions | Beverly Ann Gupit</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../images/BG Website Icon_Logogram.svg" type="image/x-icon">
+
+    <!-- tailwind css -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+
+    <!-- bootstrap v5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- font awsome -->
+    <script src="https://kit.fontawesome.com/e9c86d33df.js" crossorigin="anonymous"></script>
+
+    <!-- local css -->
+    <link rel="stylesheet" href="../style/styles.css">
+</head>
+<body class="scroll-smooth dark-mode transition duration-500 ease-in-out selection:bg-gray-400/50">
+    
+    <!-- navbar -->
+    <nav class="fixed-top shadow-md/20 font-[Poppins]">
+        <div class="px-2">
+            <div class="flex flex-row container-fluid py-4">
+                <div class="flex basis-2/3 justify-items-start">
+                    <a href="../index.html">
+                        <img src="../images/horizontal logo_white.png" alt="logo" width="160px" id="myLogo">
+                    </a>
+                </div>
+                <div class="flex basis-1/3 justify-end gap-4">
+                    <!-- dropdown dark/light mode btn -->
+                    <div class="dropdown">
+                        <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="../images/night.png" id="dayNightLogo" alt="toggle theme" width="24px" class="mt-2">
+                        </button>
+                        <ul class="dropdown-menu dark-mode">
+                            <li>
+                                <button id="lightBtn" class="dropdown-item dark-mode transition duration-500 ease-in-out">
+                                    Light mode
+                                </button>
+                            </li>
+                            <li>
+                                <button id="darkBtn" class="dropdown-item dark-mode transition duration-500 ease-in-out">
+                                    Dark mode
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- offcanvas menu btn -->
+                    <div>
+                        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+                            <img src="../images/menu_white.png" id="myMenu" alt="menu" width="24px" class="mt-2">
+                        </button>
+                        <div class="offcanvas offcanvas-end dark-mode" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+                            <div class="offcanvas-header flex justify-end">
+                                <button data-bs-dismiss="offcanvas" aria-label="Close">
+                                    <img src="../images/close_white.png" alt="close" width="24px" class="m-3">
+                                </button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div class="grid px-6">
+                                    <div class="grid py-20 justify-items-center">
+                                        <p class="fw-bold text-center">
+                                            E-commerce & Service-based Admin Specialist
+                                        </p>
+                                        <p class="text-neutral-400">
+                                            New Plymouth, Taranaki · NZ
+                                        </p>
+                                        <p>
+                                            <a href="https://www.linkedin.com/in/beverly-ann-gupit/" target="_blank" title="Let's connect">
+                                                <i class="fa-brands fa-linkedin dark-mode-text px-2 text-xl"></i>
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <a href="#" class="rounded-md grid transition duration-200 ease-in-out hover:bg-neutral-900 hover:scale-105">
+                                        <div class="p-2">
+                                            Home
+                                        </div>
+                                    </a>
+                                    <a href="#services" class="rounded-md grid transition duration-200 ease-in-out hover:bg-neutral-900 hover:scale-105">
+                                        <div class="p-2">
+                                            Services
+                                        </div>
+                                    </a>
+                                    <a href="#about" class="rounded-md grid transition duration-200 ease-in-out hover:bg-neutral-900 hover:scale-105">
+                                        <div class="p-2">
+                                            About
+                                        </div>
+                                    </a>
+                                    <a href="#projects" class="rounded-md grid transition duration-200 ease-in-out hover:bg-neutral-900 hover:scale-105">
+                                        <div class="p-2">
+                                            Projects
+                                        </div>
+                                    </a>
+                                    <a href="#testimonials" class="rounded-md grid transition duration-200 ease-in-out hover:bg-neutral-900 hover:scale-105">
+                                        <div class="p-2">
+                                            Testimonials
+                                        </div>
+                                    </a>
+                                    <a href="#pricing" class="rounded-md grid transition duration-200 ease-in-out hover:bg-neutral-900 hover:scale-105">
+                                        <div class="p-2">
+                                            Pricing
+                                        </div>
+                                    </a>
+                                    <a href="#contact" class="rounded-md grid transition duration-200 ease-in-out hover:bg-neutral-900 hover:scale-105">
+                                        <div class="p-2">
+                                            Contact
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- terms and conditions -->
+    <div class="py-40 font-[Poppins] container-fluid lg:container">
+        <h1 class="fw-bold font-[Unbounded] display-3">
+            Terms and Conditions
+        </h1>
+        <p class="text-neutral-400">
+            Effective Date: 4 August 2026
+        </p>
+        <div class="p-10">
+            <p>
+                These terms and conditions (the <span class="fw-bold">"Terms and Conditions"</span>) govern the use of <a href="../index.html" class="dark-mode-text">bevzay.github.io</a> (the <span class="fw-bold">"Site"</span>). This Site is owned and operated by Beverly Ann Gupit. This Site is a freelance e-commerce admin service.
+            </p>
+            <p>
+                By using this Site, you indicate that you have read and understand these Terms and Conditions and agree to abide by them at all times.
+            </p>
+            <br class="my-3">
+            <h2 class="fw-bold font-[Unbounded]">
+                Intellectual Property
+            </h2>
+            <p>
+                All content published and made available on our Site is the property of Beverly Ann Gupit and the Site's creators. This includes, but is not limited to, images, text, logos, documents, downloadable files, and anything that contributes to the composition of our Site.
+            </p>
+            <br class="my-3">
+            <h2 class="fw-bold font-[Unbounded]">
+                Acceptable Use
+            </h2>
+            <p>
+                As a user of our Site, you agree to use our Site legally, not to use our Site for illegal purposes, and <span class="fw-bold">not</span> to:
+            </p>
+            <p>
+                <i class="fa-solid fa-circle scale-40 dark-mode-text mr-2"></i>
+                <span>
+                    Harass or mistreat other users of our Site
+                </span>
+                <br/>
+                <i class="fa-solid fa-circle scale-40 dark-mode-text mr-2"></i>
+                <span>
+                    Violate the rights of other users of our Site
+                </span>
+                <br/>
+                <i class="fa-solid fa-circle scale-40 dark-mode-text mr-2"></i>
+                <span>
+                    Violate the intellectual property rights of the Site owners or any third party to the Site
+                </span>
+                <br/>
+                <i class="fa-solid fa-circle scale-40 dark-mode-text mr-2"></i>
+                <span>
+                    Act in any way that could be considered fraudulent
+                </span>
+                <br/>
+                <i class="fa-solid fa-circle scale-40 dark-mode-text mr-2"></i>
+                <span>
+                    Send spam, unsolicited communications, or any form of unauthorised promotional material
+                </span>
+            </p>
+            <p>
+                If we believe you are using our Site illegally or in a manner that violates these Terms and Conditions, we reserve the right to limit, suspend, or terminate your access to our Site. We also reserve the right to take any legal steps necessary to prevent you from accessing our Site.
+            </p>
+            <br class="my-3">
+            <h2 class="fw-bold font-[Unbounded]">
+                Links to Other Websites
+            </h2>
+            <p>
+                Our Site contains links to third-party websites or services that we do not own or control, including but not limited to LinkedIn.
+            </p>
+            <p>
+                We are not responsible for the content, policies, or practices of any third-party website or service linked to on our Site. It is your responsibility to read the terms and conditions and privacy policies of these third-party websites before using these sites.
+            </p>
+            <p>
+                Your interactions with any third-party websites are solely between you and that third party, and you access them at your own risk.
+            </p>
+            <br class="my-3">
+            <h2 class="fw-bold font-[Unbounded]">
+                Disclaimer of Warranties
+            </h2>
+            <p class="uppercase">
+                TO THE FULLEST EXTENT PERMITTED BY LAW, OUR WEBSITE AND SERVICES ARE PROVIDED ON AN <span class="fw-bold">"AS IS"</span> AND <span class="fw-bold">"AS AVAILABLE"</span> BASIS. WE MAKE NO WARRANTIES, REPRESENTATIONS, OR GUARANTEES OF ANY KIND, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING BUT NOT LIMITED TO:
+            </p>
+            <p>
+                <i class="fa-solid fa-circle scale-40 dark-mode-text mr-2"></i>
+                <span>
+                    Merchantability
+                </span>
+                <br/>
+                <i class="fa-solid fa-circle scale-40 dark-mode-text mr-2"></i>
+                <span>
+                    Fitness for a particular purpose
+                </span>
+                <br/>
+                <i class="fa-solid fa-circle scale-40 dark-mode-text mr-2"></i>
+                <span>
+                    Non-infringement
+                </span>
+                <br/>
+                <i class="fa-solid fa-circle scale-40 dark-mode-text mr-2"></i>
+                <span>
+                    Accuracy or completeness of content
+                </span>
+                <br/>
+                <i class="fa-solid fa-circle scale-40 dark-mode-text mr-2"></i>
+                <span>
+                    Error-free or uninterrupted operation
+                </span>
+            </p>
+            <p>
+                We do not guarantee that our website or any data available through it will be free from viruses or other harmful code.
+            </p>
+            <br class="my-3">
+            <h2 class="fw-bold font-[Unbounded]">
+                Refunds and Guarantees
+            </h2>
+            <p>
+                All services provided by Beverly are performed with reasonable skill and care. However, we do not guarantee specific outcomes or results, as the success of our services depends on various factors outside our control, including but not limited to:
+            </p>
+            <p>
+                <i class="fa-solid fa-circle scale-40 dark-mode-text mr-2"></i>
+                <span>
+                    Client cooperation and timely provision of information
+                </span>
+                <br/>
+                <i class="fa-solid fa-circle scale-40 dark-mode-text mr-2"></i>
+                <span>
+                    Third-party platform performance (Shopify, Trade Me, WooCommerce, etc.)
+                </span>
+                <br/>
+                <i class="fa-solid fa-circle scale-40 dark-mode-text mr-2"></i>
+                <span>
+                    Existing business systems and workflows
+                </span>
+                <br/>
+                <i class="fa-solid fa-circle scale-40 dark-mode-text mr-2"></i>
+                <span>
+                    External factors beyond our reasonable control
+                </span>
+            </p>
+            <p>
+                No refunds will be issued for services already rendered. If you are unsatisfied with the services provided, please contact us to discuss how we may resolve your concerns. Refunds for unused hours may be considered on a case-by-case basis at our discretion.
+            </p>
+            <br class="my-3">
+            <h2 class="fw-bold font-[Unbounded]">
+                Limitation of Liability
+            </h2>
+            <p>
+                Beverly Ann Gupit and our directors, officers, agents, employees, subsidiaries, and affiliates will not be liable for any actions, claims, losses, damages, liabilities, and expenses including legal fees arising from your use of the Site.
+            </p>
+            <br class="my-3">
+            <h2 class="fw-bold font-[Unbounded]">
+                Indemnity
+            </h2>
+            <p>
+                Except where prohibited by law, by using this Site you indemnify and hold harmless Beverly Ann Gupit and our directors, officers, agents, employees, subsidiaries, and affiliates from any actions, claims, losses, damages, liabilities and expenses including legal fees arising out of your use of our Site or your violation of these Terms and Conditions.
+            </p>
+            <br class="my-3">
+            <h2 class="fw-bold font-[Unbounded]">
+                Electronic Communications
+            </h2>
+            <p>
+                By using our Site or sending us an enquiry via our contact form or email, you consent to receive electronic communications from us. We may communicate with you by email or by posting notices on this Site. You agree that all agreements, notices, disclosures, and other communications we provide to you electronically satisfy any legal requirement that such communications be in writing.
+            </p>
+            <br class="my-3">
+            <h2 class="fw-bold font-[Unbounded]">
+                Dispute Resolution
+            </h2>
+            <p>
+                If a dispute arises between you and us regarding these Terms and Conditions or our Services, we will first attempt to resolve it through good-faith discussions and direct communication.
+            </p>
+            <p>
+                If we are unable to reach a resolution within 14 days, either Party may choose to end the working relationship. In that case, any outstanding work will be completed up to the date of termination, and the Client will pay for all Services rendered up to that point.
+            </p>
+            <p>
+                Neither Party is obligated to pursue legal action beyond this point, and both Parties agree that this is their preferred approach to resolving disputes.
+            </p>
+            <br class="my-3">
+            <h2 class="fw-bold font-[Unbounded]">
+                Applicable Law
+            </h2>
+            <p>
+                These Terms and Conditions are governed by the laws of <span class="fw-bold">New Zealand</span>. Any disputes arising out of or in connection with these Terms and Conditions shall be subject to the exclusive jurisdiction of the courts of New Zealand.
+            </p>
+            <br class="my-3">
+            <h2 class="fw-bold font-[Unbounded]">
+                Severability
+            </h2>
+            <p>
+                If at any time any of the provisions set forth in these Terms and Conditions are found to be inconsistent or invalid under applicable laws, those provisions will be deemed void and will be removed from these Terms and Conditions. All other provisions will not be affected by the removal and the rest of these Terms and Conditions will still be considered valid.
+            </p>
+            <br class="my-3">
+            <h2 class="fw-bold font-[Unbounded]">
+                Changes
+            </h2>
+            <p>
+                These Terms and Conditions may be amended from time to time in order to maintain compliance with the law and to reflect any changes to the way we operate our Site and the way we expect users to behave on our Site. We will notify users by email of changes to these Terms and Conditions or post a notice on our Site.
+            </p>
+            <br class="my-3">
+            <hr class="border-2">
+            <br class="my-3">
+            <h2 class="fw-bold font-[Unbounded]">
+                Contact Details
+            </h2>
+            <p>
+                Please contact us if you have any questions or concerns. Our contact details are as follows:
+            </p>
+            <p>
+                <i class="fa-solid fa-envelope text-sm dark-mode-text"></i>
+                &nbsp;
+                <a
+                    href="mailto:hello.beverlydigitaldoer@gmail.com?subject=General%20Enquiry">
+                    hello.beverlydigitaldoer@gmail.com
+                </a>
+            </p>
+            <p>
+                You can also contact us through the <a href="../index.html#contact" class="dark-mode-text">contact form</a> available on our Site.
+            </p>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="py-2 container-fluid font-[Poppins]">
+        <div class="grid grid-cols-3">
+            <div class="text-neutral-400 text-xs content-center">
+                <span>
+                    ©
+                </span>
+                <span id="currentYear"></span>
+                <span>
+                    Beverly Ann Gupit · E-commerce Admin Specialist · Open to Digital Businesses
+                </span>
+            </div>
+            <div class="text-center content-center text-xs">
+                <span>
+                    <a href="./pages/terms.html">
+                        Terms and Conditions
+                    </a>
+                </span>
+                <br/>
+                <span>
+                    <a href="./pages/privacy.html">
+                        Privacy Policy
+                    </a>
+                </span>
+            </div>
+            <div class="text-right content-center">
+                <span>
+                    <a href="https://www.linkedin.com/in/beverly-ann-gupit/" target="_blank" title="Let's connect">
+                        <i class="fa-brands fa-linkedin dark-mode-text px-2"></i>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const body = document.body;
+        const lightBtn = document.getElementById('lightBtn');
+        const darkBtn = document.getElementById('darkBtn');
+
+        // Images
+        const logo = document.getElementById('myLogo');
+        const dayNight = document.getElementById('dayNightLogo');
+        const menu = document.getElementById('myMenu');
+
+        // ===  theme toggle ===
+        function setTheme(theme) {
+            if (theme === 'light') {
+
+                body.classList.replace('dark-mode', 'light-mode');
+
+                // Replace secondary-dark-mode → secondary-light-mode
+                document.querySelectorAll('.secondary-dark-mode').forEach(function (el) {
+                    el.classList.replace('secondary-dark-mode', 'secondary-light-mode');
+                });
+
+                // Replace dark-mode-text → light-mode-text
+                document.querySelectorAll('.dark-mode-text').forEach(function (el) {
+                    el.classList.replace('dark-mode-text', 'light-mode-text');
+                });
+
+                // Replace dark-mode-btn → light-mode-btn
+                document.querySelectorAll('.dark-mode-btn').forEach(function (el) {
+                    el.classList.replace('dark-mode-btn', 'light-mode-btn');
+                });
+
+                // Replace dark-box → light-box
+                document.querySelectorAll('.dark-box').forEach(function (el) {
+                    el.classList.replace('dark-box', 'light-box');
+                    el.classList.replace('hover:shadow-[#fda4af]', 'hover:shadow-[#8b5cf6]');
+                });
+
+                // Replace profile-dark → profile-light
+                document.querySelectorAll('.profile-dark').forEach(function (el) {
+                    el.classList.replace('profile-dark', 'profile-light');
+                });
+
+                // Replace popular-dark-box → popular-light-box
+                document.querySelectorAll('.popular-dark-box').forEach(function (el) {
+                    el.classList.replace('popular-dark-box', 'popular-light-box');
+                    el.classList.replace('shadow-[#fda4af]', 'shadow-[#8b5cf6]');
+                });
+
+                // Replace bg-neutral-800 → bg-neutral-200
+                document.querySelectorAll('.bg-neutral-800').forEach(function (el) {
+                    el.classList.replace('bg-neutral-800', 'bg-neutral-200');
+                });
+
+                // Replace dark-service-btn → light-service-btn
+                document.querySelectorAll('.dark-service-btn').forEach(function (el) {
+                    el.classList.replace('dark-service-btn', 'light-service-btn');
+                });
+
+                // Images
+                if (logo) logo.src = '../images/horizontal logo_black.png';
+                if (dayNight) dayNight.src = '../images/day.png';
+                if (menu) menu.src = '../images/menu_black.png';
+
+            } else {
+
+                body.classList.replace('light-mode', 'dark-mode');
+
+                // Replace secondary-light-mode → secondary-dark-mode
+                document.querySelectorAll('.secondary-light-mode').forEach(function (el) {
+                    el.classList.replace('secondary-light-mode', 'secondary-dark-mode');
+                });
+
+                // Replace light-mode-text → dark-mode-text
+                document.querySelectorAll('.light-mode-text').forEach(function (el) {
+                    el.classList.replace('light-mode-text', 'dark-mode-text');
+                });
+
+                // Replace light-mode-btn → dark-mode-btn
+                document.querySelectorAll('.light-mode-btn').forEach(function (el) {
+                    el.classList.replace('light-mode-btn', 'dark-mode-btn');
+                });
+
+                // Replace light-box → dark-box
+                document.querySelectorAll('.light-box').forEach(function (el) {
+                    el.classList.replace('light-box', 'dark-box');
+                    el.classList.replace('hover:shadow-[#8b5cf6]', 'hover:shadow-[#fda4af]');
+                });
+
+                //Replace profile-light → profile-dark
+                document.querySelectorAll('.profile-light').forEach(function (el) {
+                    el.classList.replace('profile-light', 'profile-dark');
+                });
+
+                //Replace popular-light-box → popular-dark-box
+                document.querySelectorAll('.popular-light-box').forEach(function (el) {
+                    el.classList.replace('popular-light-box', 'popular-dark-box');
+                    el.classList.replace('shadow-[#8b5cf6]', 'shadow-[#fda4af]');
+                });
+
+                // Replace bg-neutral-200 → bg-neutral-800
+                document.querySelectorAll('.bg-neutral-200').forEach(function (el) {
+                    el.classList.replace('bg-neutral-200', 'bg-neutral-800');
+                });
+
+                // Replace light-service-btn → dark-service-btn
+                document.querySelectorAll('.light-service-btn').forEach(function (el) {
+                    el.classList.replace('light-service-btn', 'dark-service-btn');
+                });
+
+                // Images
+                if (logo) logo.src = '../images/horizontal logo_white.png';
+                if (dayNight) dayNight.src = '../images/night.png';
+                if (menu) menu.src = '../images/menu_white.png';
+
+            }
+        }
+
+        if (lightBtn) {
+            lightBtn.addEventListener('click', function () {
+                setTheme('light');
+            });
+        }
+
+        if (darkBtn) {
+            darkBtn.addEventListener('click', function () {
+                setTheme('dark');
+            })
+        }
+
+
+        // === auto-year in footer ===
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    </script>
+</body>
+</html>

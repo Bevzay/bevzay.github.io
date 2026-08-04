@@ -1,2 +1,6 @@
-User-agent*
-Disallow: images
+# Allow all crawlers to access everything
+User-agent: *
+Allow: /
+
+# Tell crawlers where to find your sitemap
+Sitemap: https://bevzay.github.io/sitemap.xml

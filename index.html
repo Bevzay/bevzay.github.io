@@ -4,439 +4,1309 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beverly Ann Gupit</title>
-    <meta name="description" content="Beverly Gupit - Your Digital Doer. Boost your business with website revamps, social media management & tech support. Get started today!">
+
     <!-- favicon -->
     <link rel="shortcut icon" href="./images/BG Website Icon_Logogram.svg" type="image/x-icon">
-    <!-- Google font -->
+
+    <!-- tailwind css -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Allura&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
-    <!-- bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Tailwind css -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- fontawesome -->
-    <script src="https://kit.fontawesome.com/e9c86d33df.js" crossorigin="anonymous"></script>
-    <!-- styles -->
-    <link rel="stylesheet" href="./styles/styles.css">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4KTPW4FCQ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
 
-        gtag('config', 'G-Y4KTPW4FCQ');
-    </script>
+    <!-- bootstrap v5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- font awsome -->
+    <script src="https://kit.fontawesome.com/e9c86d33df.js" crossorigin="anonymous"></script>
+
+    <!-- local css -->
+    <link rel="stylesheet" href="./style/styles.css">
 </head>
-<body class="bg-[#f6f6f6] text-[#4d4c4c] font-['DM_Sans'] text-md lg:text-xl selection:bg-gray-300">
-    <!-- nav -->
-    <div class="flex flex-row fixed-top mx-4">
-        <!-- horizontal logo -->
-        <div class="basis-1/4 my-4 md:basis-1/6">
-            <a href="./index.html">
-                <img src="./images/BG Website Icon_Horizontal Logo.svg" alt="logo" class="mx-auto">
-            </a>
-        </div>
-        <!-- menu -->
-        <div class="basis-3/4 mr-6 flex justify-end md:basis-5/6">
-            <button data-bs-toggle="offcanvas" data-bs-target="#menu">
-                <i class="fa-solid fa-bars md:text-3xl"></i>
-            </button>
-            <div class="offcanvas offcanvas-end w-100 bg-black text-[#f6f6f6] opacity-90" id="menu">
-                <div class="offcanvas-body container">
-                    <div class="flex justify-end">
-                        <button type="button" class="btn-close btn-close-white my-8 pr-14 md:text-3xl" data-bs-dismiss="offcanvas"></button>
+<body class="scroll-smooth dark-mode transition duration-500 ease-in-out selection:bg-gray-400/50">
+    
+    <!-- navbar -->
+    <nav class="fixed-top shadow-md/20 font-[Poppins]">
+        <div class="px-2">
+            <div class="flex flex-row container-fluid py-4">
+                <div class="flex basis-2/3 justify-items-start">
+                    <a href="#">
+                        <img src="./images/horizontal logo_white.png" alt="logo" width="160px" id="myLogo">
+                    </a>
+                </div>
+                <div class="flex basis-1/3 justify-end gap-4">
+                    <!-- dropdown dark/light mode btn -->
+                    <div class="dropdown">
+                        <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="./images/night.png" id="dayNightLogo" alt="toggle theme" width="24px" class="mt-2">
+                        </button>
+                        <ul class="dropdown-menu dark-mode">
+                            <li>
+                                <button id="lightBtn" class="dropdown-item dark-mode transition duration-500 ease-in-out">
+                                    Light mode
+                                </button>
+                            </li>
+                            <li>
+                                <button id="darkBtn" class="dropdown-item dark-mode transition duration-500 ease-in-out">
+                                    Dark mode
+                                </button>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="grid grid-cols-1 gap-10 opacity-100">
-                        <div class="flex justify-center text-3xl font-['Unbounded'] fw-bold underline underline-offset-4 md:text-5xl">
-                            <a href="./index.html" class="p-3 active:translate-x-0.5 active:translate-y-0.5 hover:shadow-[0.5rem_0.5rem_#f6f6f6,-0.5rem_-0.5rem_#f6f6f6] transition">
-                                HOME
-                            </a>
-                        </div>
-                        <div class="flex justify-center text-3xl font-['Unbounded'] fw-bold md:text-5xl">
-                            <a href="./pages/about.html" class="p-3 active:translate-x-0.5 active:translate-y-0.5 hover:shadow-[0.5rem_0.5rem_#f6f6f6,-0.5rem_-0.5rem_#f6f6f6] transition">
-                                ABOUT
-                            </a>
-                        </div>
-                        <div class="flex justify-center text-3xl font-['Unbounded'] fw-bold md:text-5xl">
-                            <a href="./pages/services.html" class="p-3 active:translate-x-0.5 active:translate-y-0.5 hover:shadow-[0.5rem_0.5rem_#f6f6f6,-0.5rem_-0.5rem_#f6f6f6] transition">
-                                SERVICES
-                            </a>
-                        </div>
-                        <div class="flex justify-center text-3xl font-['Unbounded'] fw-bold md:text-5xl">
-                            <a href="./pages/portfolio.html" class="p-3 active:translate-x-0.5 active:translate-y-0.5 hover:shadow-[0.5rem_0.5rem_#f6f6f6,-0.5rem_-0.5rem_#f6f6f6] transition">
-                                PORTFOLIO
-                            </a>
-                        </div>
-                        <div class="flex justify-center text-3xl font-['Unbounded'] fw-bold md:text-5xl">
-                            <a href="./pages/contact.html" class="p-3 active:translate-x-0.5 active:translate-y-0.5 hover:shadow-[0.5rem_0.5rem_#f6f6f6,-0.5rem_-0.5rem_#f6f6f6] transition">
-                                CONTACT
-                            </a>
-                        </div>
-                        <div class="flex flex-row gap-4 justify-center">
-                            <div class="basis-8">
-                                <a href="https://www.instagram.com/beverlygupit" target="_blank" rel="noopener noreferrer">
-                                    <img src="./images/BG Website Icon_Instagram.svg" alt="instagram" class="mx-auto">
-                                </a>
+                    <!-- offcanvas menu btn -->
+                    <div>
+                        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+                            <img src="./images/menu_white.png" id="myMenu" alt="menu" width="24px" class="mt-2">
+                        </button>
+                        <div class="offcanvas offcanvas-end dark-mode" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+                            <div class="offcanvas-header flex justify-end">
+                                <button data-bs-dismiss="offcanvas" aria-label="Close">
+                                    <img src="./images/close_white.png" alt="close" width="24px" class="m-3">
+                                </button>
                             </div>
-                            <div class="basis-8">
-                                <a href="https://www.linkedin.com/in/beverly-ann-gupit/" target="_blank" rel="noopener noreferrer">
-                                    <img src="./images/BG Website Icon_Linkedin.svg" alt="linkedin" class="mx-auto">
-                                </a>
+                            <div class="offcanvas-body">
+                                <div class="grid px-6">
+                                    <div class="grid py-20 justify-items-center">
+                                        <p class="fw-bold text-center">
+                                            E-commerce & Service-based Admin Specialist
+                                        </p>
+                                        <p class="text-neutral-400">
+                                            New Plymouth, Taranaki · NZ
+                                        </p>
+                                        <p>
+                                            <a href="https://www.linkedin.com/in/beverly-ann-gupit/" target="_blank" title="Let's connect">
+                                                <i class="fa-brands fa-linkedin dark-mode-text px-2 text-xl"></i>
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <a href="#" class="rounded-md grid transition duration-200 ease-in-out hover:bg-neutral-900 hover:scale-105">
+                                        <div class="p-2">
+                                            Home
+                                        </div>
+                                    </a>
+                                    <a href="#services" class="rounded-md grid transition duration-200 ease-in-out hover:bg-neutral-900 hover:scale-105">
+                                        <div class="p-2">
+                                            Services
+                                        </div>
+                                    </a>
+                                    <a href="#about" class="rounded-md grid transition duration-200 ease-in-out hover:bg-neutral-900 hover:scale-105">
+                                        <div class="p-2">
+                                            About
+                                        </div>
+                                    </a>
+                                    <a href="#projects" class="rounded-md grid transition duration-200 ease-in-out hover:bg-neutral-900 hover:scale-105">
+                                        <div class="p-2">
+                                            Projects
+                                        </div>
+                                    </a>
+                                    <a href="#testimonials" class="rounded-md grid transition duration-200 ease-in-out hover:bg-neutral-900 hover:scale-105">
+                                        <div class="p-2">
+                                            Testimonials
+                                        </div>
+                                    </a>
+                                    <a href="#pricing" class="rounded-md grid transition duration-200 ease-in-out hover:bg-neutral-900 hover:scale-105">
+                                        <div class="p-2">
+                                            Pricing
+                                        </div>
+                                    </a>
+                                    <a href="#contact" class="rounded-md grid transition duration-200 ease-in-out hover:bg-neutral-900 hover:scale-105">
+                                        <div class="p-2">
+                                            Contact
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!---->
-    <!-- hero section -->
-    <div class="homepage py-14 md:py-52 lg:py-40">
-        <div class="container gap-0 justify-center gap-5 md:gap-10">
-            <!-- text -->
-            <div class="pt-40 md:pt-10 lg:pt-40">
-                <h1 class="font-['Unbounded'] text-4xl text-center md:text-7xl">
-                    <b>
-                        TRANSFORM YOUR DIGITAL PRESENCE & GETTING YOUR FOCUS BACK
-                    </b>
-                </h1>
-                <p class="pt-3 text-center">
-                    Expert solutions for your digital needs and your online presence managed with ease
-                </p>
-                <div class="flex gap-12 pt-10 justify-center">
-                    <div>
-                        <a href="./pages/services.html" class="px-4 py-2 border-2 border-[#4d4c4c] text-[#f6f6f6] bg-[#4d4c4c] active:translate-x-0.5 active:translate-y-0.5 hover:shadow-[0.5rem_0.5rem_#f3d3f1,-0.5rem_-0.5rem_#a1aafd] transition">
-                            Get started
-                        </a>
-                    </div>
-                    <div>
-                        <a href="#intro" class="px-4 py-2 border-2 border-[#4d4c4c] bg-[#f6f6f6] active:translate-x-0.5 active:translate-y-0.5 hover:shadow-[0.5rem_0.5rem_#f3d3f1,-0.5rem_-0.5rem_#a1aafd] transition">
-                            Learn more
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!---->
-    <!-- intro section -->
-    <div class="py-10 md:py-20" id="intro">
-        <div class="container">
-            <p class="text-center text-sm py-2">
-                <span class="pt-1 border-t-2 border-[#4d4c4c]">
-                    ABOUT
-                </span>
-            </p>
-            <h2 class="text-center font-['Unbounded'] text-4xl md:text-5xl">
-                <b>Digital Doer & Virtual Assistant</b>
-            </h2>
-            <div class="pt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
-                <div class="justify-center">
+    </nav>
+    
+
+    <!-- home section -->
+    <div class="font-[Poppins] py-20 container-fluid lg:container">
+        <div class="pt-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                <!-- home section -->
+                <div>
+                    <h1 class="display-3 fw-bold font-[Unbounded]">
+                        You focus on <span class="dark-mode-text">sales and clients</span>.
+                        <br/>
+                        I'll focus on <span class="dark-mode-text">everything else</span>.
+                    </h1>
+                    <p class="mr-10 lg:mr-30">
+                        I take the admin weight off your shoulders so you can focus on growing your business.
+                    </p>
+                    <a href="#pricing">
+                        <button class="py-2 px-3 dark-mode-btn fw-semibold shadow-md transition duration-200 ease-in-out hover:scale-105 hover:shadow-xl/20">
+                            Let's Simplify Your Business
+                        </button>
+                    </a>
+                    <br class="my-4">
                     <p>
-                        Hi! I'm Beverly Ann Gupit, a versatile Digital Doer and Virtual Assistant specialising in website management, administrative support, and tech assistance. 
-                        With advanced skills in HTML, CSS/SCSS, and Bootstrap, I create and manage sleek, responsive websites that elevate your online presence. 
-                        Coupled with efficient schedule management, email handling, and top-notch customer service, I ensure your business operations run smoothly. 
-                        Whether you need a polished website or reliable tech support, I'm here to help your business thrive. 
+                        <i class="fa-solid fa-circle-check text-sm dark-mode-text"></i>
+                        &nbsp;
+                        <span class="text-neutral-400 text-xs">
+                            Trusted by online businesses across NZ
+                        </span>
                     </p>
-                    <p class="pt-4">
-                        <a href="./pages/about.html" class="px-4 py-2 border-2 border-[#4d4c4c] text-[#f6f6f6] bg-[#4d4c4c] active:translate-x-0.5 active:translate-y-0.5 hover:shadow-[0.5rem_0.5rem_#f3d3f1,-0.5rem_-0.5rem_#a1aafd] transition">
-                            More about me
-                        </a>
-                    </p>
+                    
                 </div>
-                <div class="justify-center">
-                    <img src="./images/profile.png" alt="profile image" class="mx-auto my-auto rounded-md" width="300px">
+                <div>
+                    <img src="./images/profile.png" alt="Beverly Gupit" class="mx-auto rounded-full">
                 </div>
             </div>
         </div>
     </div>
-    <!---->
-    <!-- businesses gallery -->
-    <div class="py-10 md:py-20">
-        <div class="container">
-            <p class="text-center text-sm py-2">
-                <span class="pt-1 border-t-2 border-[#4d4c4c]">
-                    BUSINESSES SERVED
-                </span>
-            </p>
-            <h2 class="text-center font-['Unbounded'] text-4xl md:text-5xl">
-                <b>Who I Worked With</b>
-            </h2>
-            <div class="pt-10 grid grid-cols-2 gap-4 md:grid-cols-4 ">
-                <div class="justify-center">
-                    <a href="https://drive.google.com/file/d/11rd-Vh7JtZmAT231wTFo05qL_yS3nVuY/view?usp=sharing" target="_blank" rel="noopener noreferrer" title="Manaaki">
-                        <img src="./images/manaaki.png" alt="Manaaki" class="mx-auto my-auto" width="150px">
-                    </a>
-                </div>
-                <div class="justify-center">
-                    <a href="https://www.chooza.com" target="_blank" rel="noopener noreferrer" title="Chooza">
-                        <img src="./images/chooza.png" alt="Chooza" class="mx-auto my-auto" width="150px">
-                    </a>
-                </div>
-                <div class="justify-center">
-                    <a href="https://mqtooling.com" target="_blank" rel="noopener noreferrer" title="MQTooling">
-                        <img src="./images/mqtooling.png" alt="MQTooling" class="mx-auto my-auto" width="150px">
-                    </a>
-                </div>
-                <div class="justify-center">
-                    <a href="https://www.kadishamara.com" target="_blank" rel="noopener noreferrer" title="Kadishamara Photography">
-                        <img src="./images/kadishamara.png" alt="Kadishamara" class="mx-auto my-auto" width="150px">
-                    </a>
-                </div>
-                <div class="justify-center">
-                    <a href="https://www.vossostudio.com" target="_blank" rel="noopener noreferrer" title="Vosso NZ">
-                        <img src="./images/vosso.png" alt="Vosso NZ" class="mx-auto my-auto" width="150px">
-                    </a>
-                </div>
-                <div class="justify-center">
-                    <a href="https://www.buildingnetworks.co.nz" target="_blank" rel="noopener noreferrer" title="Building Networks NZ">
-                        <img src="./images/bnets.png" alt="Building Networks NZ" class="mx-auto my-auto" width="150px">
-                    </a>
-                </div>
-                <div class="justify-center">
-                    <a href="https://yourva.co.nz" target="_blank" rel="noopener noreferrer" title="YourVA NZ">
-                        <img src="./images/YourVA.png" alt="YourVA NZ" class="mx-auto my-auto" width="150px">
-                    </a>
-                </div>
-                <div class="justify-center">
-                    <a href="https://thelmafrench.com" target="_blank" rel="noopener noreferrer" title="Thelma French">
-                        <img src="./images/thelma french.png" alt="Thelma French" class="mx-auto my-auto" width="150px">
-                    </a>
-                </div>
+
+    <!-- small banner -->
+    <div class="font-[Poppins] py-10 grid justify-items-center secondary-dark-mode">
+        <h2 class="display-7 fw-bold font-[Unbounded] text-center container-fluid">
+            You're not falling behind — you're just carrying too much alone
+        </h2>
+        <p class="text-center container">
+            AI can help, but it can't make judgment calls, handle a tricky client, or actually know your business the way a person can.
+            <br>
+            <span class="dark-mode-text">
+                That's what I'm here for.
+            </span>
+        </p>
+    </div>
+
+    <!-- services section -->
+    <div class="font-[Poppins] py-40 container-fluid lg:py-64 lg:container" id="services">
+        <h2 class="display-5 fw-bold font-[Unbounded]">
+            Everything That's Piling Up Will Be Handled
+        </h2>
+        <p>
+            Six core areas of focus — each one designed to lift the operational weight off your shoulders.
+        </p>
+        <div class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="p-6 rounded-md dark-box shadow-md transition duration-200 ease-in-out hover:scale-102">
+                <h3 class="fw-semibold font-[Unbounded]">
+                    Admin Management
+                </h3>
+                <p>
+                    Email management, calendar scheduling, data entry, document preparation — the backbone of your operations.
+                </p>
+            </div>
+            <div class="p-6 rounded-md dark-box shadow-md transition duration-200 ease-in-out hover:scale-102">
+                <h3 class="fw-semibold font-[Unbounded]">
+                    Research
+                </h3>
+                <p>
+                    Finding the right tools, products, and solutions quickly — so you don't have to spend hours digging.
+                </p>
+            </div>
+            <div class="p-6 rounded-md dark-box shadow-md transition duration-200 ease-in-out hover:scale-102">
+                <h3 class="fw-semibold font-[Unbounded]">
+                    Customer Service
+                </h3>
+                <p>
+                    Order inquiries, client communication, return requests, and general support — keeping your customers or clients happy.
+                </p>
+            </div>
+            <div class="p-6 rounded-md dark-box shadow-md transition duration-200 ease-in-out hover:scale-102">
+                <h3 class="fw-semibold font-[Unbounded]">
+                    Website Management
+                </h3>
+                <p>
+                    Product descriptions, service listings, banners, pricing changes, and page content updates — keeping your site fresh.
+                </p>
+            </div>
+            <div class="p-6 rounded-md dark-box shadow-md transition duration-200 ease-in-out hover:scale-102">
+                <h3 class="fw-semibold font-[Unbounded]">
+                    Coordination
+                </h3>
+                <p>
+                    Marketing scheduling, email campaigns, appointment setting, and content coordination — aligning your efforts across channels.
+                </p>
+            </div>
+            <div class="p-6 rounded-md dark-box shadow-md transition duration-200 ease-in-out hover:scale-102">
+                <h3 class="fw-semibold font-[Unbounded]">
+                    Tech & Project Management
+                </h3>
+                <p>
+                    DNS fixes, platform troubleshooting, security checks, and full project coordination — your operational right hand.
+                </p>
             </div>
         </div>
     </div>
-    <!---->
-    <!-- testimonials -->
-    <div class="py-10 md:py-20">
-        <div class="container">
-            <p class="text-center text-sm py-2">
-                <span class="pt-1 border-t-2 border-[#4d4c4c]">
-                    TESTIMONIALS
-                </span>
-            </p>
-            <h2 class="text-center font-['Unbounded'] text-4xl md:text-5xl ">
-                <b>Client Feedback</b>
-            </h2>
-            <div class="grid pt-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                <div class="p-3">
-                    <div class="flex flex-initial bg-[#f6f6f6] shadow-lg rounded-md">
-                        <div class="p-4 text-sm">
-                            <p>
-                                <i class="fa-solid fa-quote-left"></i>
-                            </p>
-                            <p>
-                                <i>
-                                    Beverly was able to navigate the constantly shifting sands of a start-up, especially at such a fluid and critical time in the project. Her ability to quickly find where she could add the most value and run with those opportunities created a real safe pair of hands for the work she was doing.
-                                </i>
-                            </p>
-                            <p class="text-end">
-                                <i class="fa-solid fa-quote-right"></i>
-                            </p>
-                            <br/>
-                            <p class="text-end">
-                                - STEPHEN MOON | FOUNDER OF CHOOZA
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-3">
-                    <div class="flex flex-initial bg-[#f6f6f6] shadow-lg rounded-md">
-                        <div class="p-4 text-sm">
-                            <p>
-                                <i class="fa-solid fa-quote-left"></i>
-                            </p>
-                            <p>
-                                <i>
-                                    Very professional. Easy to work with. Put my mind at ease, knowing that you were doing the work that would have otherwise taken a big chunk of my time.
-                                </i>
-                            </p>
-                            <p class="text-end">
-                                <i class="fa-solid fa-quote-right"></i>
-                            </p>
-                            <br/>
-                            <p class="text-end">
-                                - KADISHA GOMES | FOUNDER OF KADISHAMARA PHOTOGRAPHY
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-3">
-                    <div class="flex flex-initial bg-[#f6f6f6] shadow-lg rounded-md">
-                        <div class="p-4 text-sm">
-                            <p>
-                                <i class="fa-solid fa-quote-left"></i>
-                            </p>
-                            <p>
-                                <i>
-                                    I am really happy with your service, you really helped me out in a time of feeling the crunch and just jumped in there, and were responsive and available. You are willing and helpful, available and easy to deal with. I am super grateful for the help you have given me.
-                                </i>
-                            </p>
-                            <p class="text-end">
-                                <i class="fa-solid fa-quote-right"></i>
-                            </p>
-                            <br/>
-                            <p class="text-end">
-                                - FIONA MCDONALD | FOUNDER OF VOSSO STUDIO NZ
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                <div class="p-3">
-                    <div class="flex flex-initial bg-[#f6f6f6] shadow-lg rounded-md">
-                        <div class="p-4 text-sm">
-                            <p>
-                                <i class="fa-solid fa-quote-left"></i>
-                            </p>
-                            <p>
-                                <i>
-                                    Beverly can turn her hand to all things digital. She has helped us with everything from Google ads, website dns updates, Articulate Rise content, email campaigns, linked in posts, capsule crm updates  and been our technical support in the several apps we use in our small business. She is knowledgeable efficient, accurate and wonderful to work with.
-                                    List all the apps you can turn your hand to to make you stand out from regular VA work
-                                </i>
-                            </p>
-                            <p class="text-end">
-                                <i class="fa-solid fa-quote-right"></i>
-                            </p>
-                            <br/>
-                            <p class="text-end">
-                                - ROSEMARY KILLIP | FOUNDER OF BUILDING NETWORKS NZ
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-3">
-                    <div class="flex flex-initial bg-[#f6f6f6] shadow-lg rounded-md">
-                        <div class="p-4 text-sm">
-                            <p>
-                                <i class="fa-solid fa-quote-left"></i>
-                            </p>
-                            <p>
-                                <i>
-                                    I highly recommend Beverly.  As a contractor to Your Virtual Assistant, Beverly was very much a team player, always putting her hand up when someone needed support.  She shines at quickly grasping new technology, we could throw her a task and she'd get up to speed quickly, always delivering the client's desired outcome.
-                                    If you're looking for someone who is very people orientated, who consistently over delivers, who's a great communicator ... look no further.
-                                </i>
-                            </p>
-                            <p class="text-end">
-                                <i class="fa-solid fa-quote-right"></i>
-                            </p>
-                            <br/>
-                            <p class="text-end">
-                                - JUSTINE PARSONS | FOUNDER OF YOUR VIRTUAL ASSISTANT NZ
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+    <!-- about section -->
+    <div class="font-[Poppins] py-40 secondary-dark-mode" id="about">
+        <div class="container-fluid lg:container">
+            
         </div>
-    </div>
-    <!---->
-    <!-- services -->
-    <div class="py-10 md:py-20">
-        <div class="container">
-            <div class="parallax p-5 rounded-md shadow-lg">
-                <h2 class="text-center font-['Unbounded'] text-4xl md:text-5xl">
-                    <b>
-                        Focus what you do best
-                    </b>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 container-fluid lg:container">
+            <div>
+                <h2 class="display-5 fw-bold font-[Unbounded]">
+                    Sounds Familiar?
                 </h2>
-                <p class="pt-3 text-center">
-                    While I digitally manage the rest
+                <p>
+                    Orders keep landing. Messages keep stacking up. You sit down meaning to get ahead of it, and somehow you're
+                    still
+                    behind by the end of the day.
                 </p>
-                <p class="pt-4 text-center">
-                    <a href="./pages/services.html" class="px-4 py-2 border-2 border-[#4d4c4c] text-[#f6f6f6] bg-[#4d4c4c] active:translate-x-0.5 active:translate-y-0.5 hover:shadow-[0.5rem_0.5rem_#f6f6f6,-0.5rem_-0.5rem_#f6f6f6] transition">
-                        Get started now
-                    </a>
+                <p>
+                    You didn't start this business to spend your time buried in admin — you started it to build something. Right
+                    now,
+                    it's working. It's just a lot to carry alone.
+                </p>
+                <br/>
+                <h3 class="fw-bold font-[Unbounded]">
+                    That's where I come in
+                </h3>
+                <p>
+                    I specialise in <span class="dark-mode-text fw-bold">operations and admin support</span> — taking over the
+                    day-to-day so you can focus on growth. I've seen how messy and overwhelming admin can get, and I know exactly
+                    how to
+                    bring order to the chaos.
+                </p>
+                <br />
+                <h3 class="fw-bold font-[Unbounded]">
+                    Reliable help, without the overhead
+                </h3>
+                <p>
+                    I don't just "do tasks." I become a reliable part of your business rhythm. Admin + tech support + website
+                    management
+                    — all in one person.
+                </p>
+                <br />
+                <p class="dark-mode-text fw-bold pt-2">
+                    If that sounds like you, let's talk.
+                </p>
+            </div>
+            <div>
+                <div class="p-6 mx-6 rounded-md profile-dark shadow-lg">
+                    <div class="grid grid-cols-6 gap-2">
+                        <div class="col-span-1">
+                            <img src="./images/bev.png" alt="Beverly Ann Gupit" class="mx-auto">
+                        </div>
+                        <div class="col-span-5 content-center">
+                            <p>
+                                <span class="fw-bold">
+                                    Beverly Ann Gupit
+                                </span>
+                                <br/>
+                                <span>
+                                    E-commerce Admin Specialist
+                                </span>
+                                <br/>
+                                <span class="text-neutral-400 text-xs">
+                                    New Plymouth, Taranaki · NZ
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <hr class="border-2">
+                    <div class="py-2 grid grid-cols-1 md:grid-cols-3 gap-2">
+
+                        <!-- modal btn -->
+                        <button data-bs-toggle="modal" data-bs-target="#skill1">
+                            <div class="rounded-full dark-box transition duration-200">
+                                <div class="px-2 text-xs py-1">
+                                    <div class="flex flex-row gap-2">
+                                        <div class="flex">
+                                            <span class="dark-mode-text">&#9210;</span>
+                                        </div>
+                                        <div class="flex">
+                                            E-commerce specialist
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                        <button data-bs-toggle="modal" data-bs-target="#skill2">
+                            <div class="rounded-full dark-box transition duration-200">
+                                <div class="px-2 text-xs py-1">
+                                    <div class="flex flex-row gap-2">
+                                        <div class="flex">
+                                            <span class="dark-mode-text">&#9210;</span>
+                                        </div>
+                                        <div class="flex">
+                                            Platform-agnostic
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                        <button data-bs-toggle="modal" data-bs-target="#skill3">
+                            <div class="rounded-full dark-box transition duration-200">
+                                <div class="px-2 text-xs py-1">
+                                    <div class="flex flex-row gap-2">
+                                        <div class="flex">
+                                            <span class="dark-mode-text">&#9210;</span>
+                                        </div>
+                                        <div class="flex">
+                                            AI-assisted copyrighting
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                        <button data-bs-toggle="modal" data-bs-target="#skill4">
+                            <div class="rounded-full dark-box transition duration-200">
+                                <div class="px-2 text-xs py-1">
+                                    <div class="flex flex-row gap-2">
+                                        <div class="flex">
+                                            <span class="dark-mode-text">&#9210;</span>
+                                        </div>
+                                        <div class="flex">
+                                            Proactive problem-solver
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                        <button data-bs-toggle="modal" data-bs-target="#skill5">
+                            <div class="rounded-full dark-box transition duration-200">
+                                <div class="px-2 text-xs py-1">
+                                    <div class="flex flex-row gap-2">
+                                        <div class="flex">
+                                            <span class="dark-mode-text">&#9210;</span>
+                                        </div>
+                                        <div class="flex">
+                                            Consistent availability
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                        
+                        <!-- modal content -->
+                        <div class="modal fade" id="skill1" tabindex="-1" aria-labelledby="skill1Modal">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content dark-mode">
+                                    <div class="flex justify-end">
+                                        <button data-bs-dismiss="modal" aria-label="Close">
+                                            <img src="./images/close_white.png" alt="close" width="24px" class="m-3">
+                                        </button>
+                                    </div>
+                                    <div class="py-2 px-10 justify-right">
+                                        <img src="./images/store.svg" alt="e-commerce specialist" width="10%">
+                                    </div>
+                                    <div class="pb-3 px-10">
+                                        <h3 class="fw-bold font-[Unbounded]">
+                                            E-commerce Specialist
+                                        </h3>
+                                        <p class="text-neutral-400">
+                                            My core focus is online stores — order processing, inventory coordination, product listings, and the day-to-day operations that keep a shop running smoothly. That said, I'm just as comfortable supporting service-based businesses that need the same level of admin structure.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="skill2" tabindex="-1" aria-labelledby="skill1Modal">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content dark-mode">
+                                    <div class="flex justify-end">
+                                        <button data-bs-dismiss="modal" aria-label="Close">
+                                            <img src="./images/close_white.png" alt="close" width="24px" class="m-3">
+                                        </button>
+                                    </div>
+                                    <div class="py-2 px-10 justify-right">
+                                        <img src="./images/platform.svg" alt="platform-agnostic" width="10%">
+                                    </div>
+                                    <div class="pb-3 px-10">
+                                        <h3 class="fw-bold font-[Unbounded]">
+                                            Platform-Agnostic
+                                        </h3>
+                                        <p class="text-neutral-400">
+                                            Whether your store or site runs on Shopify, Trade Me, WooCommerce, or something custom-built, I can jump in and get productive fast. No lengthy onboarding — I adapt to your existing tools instead of asking you to change them.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="skill3" tabindex="-1" aria-labelledby="skill1Modal">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content dark-mode">
+                                    <div class="flex justify-end">
+                                        <button data-bs-dismiss="modal" aria-label="Close">
+                                            <img src="./images/close_white.png" alt="close" width="24px" class="m-3">
+                                        </button>
+                                    </div>
+                                    <div class="py-2 px-10 justify-right">
+                                        <img src="./images/AI.svg" alt="AI" width="10%">
+                                    </div>
+                                    <div class="pb-3 px-10">
+                                        <h3 class="fw-bold font-[Unbounded]">
+                                            Strategic AI Use
+                                        </h3>
+                                        <p class="text-neutral-400">
+                                            I use AI as a tool to speed up copywriting and first drafts, not as a replacement for judgment. That keeps my time focused on the operations, coordination, and decision-making that actually move your business forward.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="skill4" tabindex="-1" aria-labelledby="skill1Modal">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content dark-mode">
+                                    <div class="flex justify-end">
+                                        <button data-bs-dismiss="modal" aria-label="Close">
+                                            <img src="./images/close_white.png" alt="close" width="24px" class="m-3">
+                                        </button>
+                                    </div>
+                                    <div class="py-2 px-10 justify-right">
+                                        <img src="./images/problem_solver.svg" alt="problem solver" width="10%">
+                                    </div>
+                                    <div class="pb-3 px-10">
+                                        <h3 class="fw-bold font-[Unbounded]">
+                                            Proactive Problem-Solver
+                                        </h3>
+                                        <p class="text-neutral-400">
+                                            I don't wait for things to break. Part of my role is watching for bottlenecks — a slow process, a gap in communication, a task quietly piling up — and flagging or fixing them before they become bigger issues.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="skill5" tabindex="-1" aria-labelledby="skill1Modal">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content dark-mode">
+                                    <div class="flex justify-end">
+                                        <button data-bs-dismiss="modal" aria-label="Close">
+                                            <img src="./images/close_white.png" alt="close" width="24px" class="m-3">
+                                        </button>
+                                    </div>
+                                    <div class="py-2 px-10 justify-right">
+                                        <img src="./images/availability.svg" alt="availability" width="10%">
+                                    </div>
+                                    <div class="pb-3 px-10">
+                                        <h3 class="fw-bold font-[Unbounded]">
+                                            Consistent Monthly Availability
+                                        </h3>
+                                        <p class="text-neutral-400">
+                                            This isn't a one-off project or a freelancer you'll have to re-brief every few months. I work with clients on an ongoing monthly basis, so I stay familiar with your business and can be relied on month after month.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="border-2">
+                    <p class="mt-2 fw-bold">
+                        <span class="dark-mode-text">&#9432;</span> Why choose me over AI (and everyone else)
+                    </p>
+                    <p class="text-neutral-400 text-xs">
+                        How I compare to the other options too. 
+                    </p>
+                    <div class="my-2">
+                        <div class="mx-4">
+                            <p>
+                                <span class="text-neutral-400 text-xs uppercase fw-bold">
+                                    vs. Virtual Assistants
+                                </span>
+                                <br />
+                                <span>
+                                    Admin + Tech + Ops in one
+                                </span>
+                            </p>
+                        </div>
+                        <hr class="border-2 mx-4">
+                        <div class="mx-4">
+                            <p>
+                                <span class="text-neutral-400 text-xs uppercase fw-bold">
+                                    vs. Web Developers
+                                </span>
+                                <br />
+                                <span>
+                                    Ongoing maintenance & updates
+                                </span>
+                            </p>
+                        </div>
+                        <hr class="mx-4">
+                        <div class="flex mx-4">
+                            <p>
+                                <span class="text-neutral-400 text-xs uppercase fw-bold">
+                                    vs. AI
+                                </span>
+                                <br />
+                                <span>
+                                    Judgment, context & real relationships
+                                </span>
+                            </p>
+                        </div>
+                        <hr class="mx-4">
+                        <div class="flex mx-4">
+                            <p>
+                                <span class="text-neutral-400 text-xs uppercase fw-bold">
+                                    vs. Full-time Admin
+                                </span>
+                                <br />
+                                <span>
+                                    A cost-effective retainer, zero overhead
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- projects -->
+    <div class="py-40 font-[Poppins] container-fluid lg:py-64 lg:container" id="projects">
+        <h2 class="display-5 fw-bold font-[Unbounded]">
+            Projects I've Worked On
+        </h2>
+        <p>
+            From operational systems to website support — here's a selection of my work.
+        </p>
+        <div class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="p-6 rounded-md dark-box shadow-md transition duration-200 ease-in-out hover:scale-102">
+                <h3 class="fw-semibold font-[Unbounded]">
+                    Building Networks Ltd.
+                </h3>
+                <div class="my-3 grid grid-cols-1 gap-1 md:grid-cols-2 lg:grid-cols-3">
+                    <div class="px-2 py-1 text-xs text-center dark-mode border-1 rounded-full border-neutral-800">
+                        Operations
+                    </div>
+                    <div class="px-2 py-1 text-xs text-center dark-mode border-1 rounded-full border-neutral-800">
+                        Tech Support
+                    </div>
+                    <div class="px-2 py-1 text-xs text-center dark-mode border-1 rounded-full border-neutral-800">
+                        Email Campaigns
+                    </div>
+                </div>
+                <p>
+                    Managed website operations, drafted blogs, fixed DNS issues, coordinated email campaigns, and developed course content.
+                </p>
+            </div>
+            <div class="p-6 rounded-md dark-box shadow-md transition duration-200 ease-in-out hover:scale-102">
+                <h3 class="fw-semibold font-[Unbounded]">
+                    MQ Tooling Ltd.
+                </h3>
+                <div class="my-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
+                    <div class="px-2 py-1 text-xs text-center dark-mode border-1 rounded-full border-neutral-800">
+                        Shopify
+                    </div>
+                    <div class="px-2 py-1 text-xs text-center dark-mode border-1 rounded-full border-neutral-800">
+                        Website
+                    </div>
+                    <div class="px-2 py-1 text-xs text-center dark-mode border-1 rounded-full border-neutral-800">
+                        Tech Support
+                    </div>
+                </div>
+                <p>
+                    Customised Shopify homepage, coded product pages with HTML/Bootstrap, and provided ongoing tech support.
+                </p>
+            </div>
+            <div class="p-6 rounded-md dark-box shadow-md transition duration-200 ease-in-out hover:scale-102">
+                <h3 class="fw-semibold font-[Unbounded]">
+                    Alina Kibbel
+                </h3>
+                <div class="my-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
+                    <div class="px-2 py-1 text-xs text-center dark-mode border-1 rounded-full border-neutral-800">
+                        Website Revamp
+                    </div>
+                    <div class="px-2 py-1 text-xs text-center dark-mode border-1 rounded-full border-neutral-800">
+                        UX/UI
+                    </div>
+                </div>
+                <p>
+                    Redesigned her coaching website to be user-friendly and easy to edit — no developer needed for updates.
+                </p>
+            </div>
+            <div class="p-6 rounded-md dark-box shadow-md transition duration-200 ease-in-out hover:scale-102">
+                <h3 class="fw-semibold font-[Unbounded]">
+                    Kadisha Gomes
+                </h3>
+                <div class="my-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
+                    <div class="px-2 py-1 text-xs text-center dark-mode border-1 rounded-full border-neutral-800">
+                        Website Revamp
+                    </div>
+                    <div class="px-2 py-1 text-xs text-center dark-mode border-1 rounded-full border-neutral-800">
+                        UX/UI
+                    </div>
+                </div>
+                <p>
+                    Made her photography site visually appealing and intuitive for client updates.
+                </p>
+            </div>
+            <div class="p-6 rounded-md dark-box shadow-md transition duration-200 ease-in-out hover:scale-102">
+                <h3 class="fw-semibold font-[Unbounded]">
+                    Chooza
+                </h3>
+                <div class="my-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
+                    <div class="px-2 py-1 text-xs text-center dark-mode border-1 rounded-full border-neutral-800">
+                        Website
+                    </div>
+                    <div class="px-2 py-1 text-xs text-center dark-mode border-1 rounded-full border-neutral-800">
+                        HTML
+                    </div>
+                    <div class="px-2 py-1 text-xs text-center dark-mode border-1 rounded-full border-neutral-800">
+                        Bootstrap
+                    </div>
+                </div>
+                <p>
+                    Revamped the charity marketplace website and resolved backend technical issues.
+                </p>
+            </div>
+            <div class="p-6 rounded-md dark-box shadow-md transition duration-200 ease-in-out hover:scale-102">
+                <h3 class="fw-semibold font-[Unbounded]">
+                    Sustainability 360
+                </h3>
+                <div class="my-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
+                    <div class="px-2 py-1 text-xs text-center dark-mode border-1 rounded-full border-neutral-800">
+                        Coordination
+                    </div>
+                    <div class="px-2 py-1 text-xs text-center dark-mode border-1 rounded-full border-neutral-800">
+                        Content Planning
+                    </div>
+                </div>
+                <p>
+                    Created a monthly content planner and brand voice guides for the carbon-footprint app.
                 </p>
             </div>
         </div>
     </div>
-    <!---->
-    <!-- footer-->
-        <div class="bg-[#4d4c4c] text-[#f6f6f6] pt-10 pb-2 md:pt-20">
-            <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-                <div class="grid text-center">
-                    <p>
-                        <b>
-                            Quick Links
-                        </b>
+
+    <!-- testimonials -->
+    <div class="py-40 secondary-dark-mode font-[Poppins] lg:py-64" id="testimonials">
+        <div class="container-fluid lg:container">
+            <h2 class="fw-bold font-[Unbounded] display-5 text-center">
+                Client Feedback
+            </h2>
+            <p class="text-center">
+                What it's like working with me.
+            </p>
+            <div class="mt-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
+                <div class="p-6 mx-6 rounded-md profile-dark shadow-md">
+                    <p class="italic">
+                        <span>&#10077;</span>
+                        Beverly was able to navigate the constantly shifting sands of a start-up, especially at such a fluid and critical time in the project. Her ability to quickly find where she could add the most value and run with those opportunities created a real safe pair of hands for the work she was doing. 
+                        <span>&#10078;</span>
                     </p>
-                    <p>
-                        <a href="#">
-                            Home
-                        </a>
-                    </p>
-                    <p>
-                        <a href="./pages/about.html">
-                            About
-                        </a>
-                    </p>
-                    <p>
-                        <a href="./pages/services.html">
-                            Services
-                        </a>
-                    </p>
-                    <p>
-                        <a href="./pages/portfolio.html">
-                            Portfolio
-                        </a>
-                    </p>
-                    <p>
-                        <a href="./pages/contact.html">
-                            Contact
-                        </a>
+                    <p class="text-right uppercase text-neutral-400 text-xs">
+                        STEPHEN MOON | FOUNDER OF CHOOZA
                     </p>
                 </div>
-                <div class="grid text-center">
+                <div class="p-6 mx-6 rounded-md profile-dark shadow-md">
+                    <p class="italic">
+                        <span>&#10077;</span>
+                        I am really happy with your service, you really helped me out in a time of feeling the crunch and just jumped in there, and were responsive and available. You are willing and helpful, available and easy to deal with. I am super grateful for the help you have given me. 
+                        <span>&#10078;</span>
+                    </p>
+                    <p class="text-right uppercase text-neutral-400 text-xs">
+                        FIONA MCDONALD | FOUNDER OF VOSSO STUDIO NZ
+                    </p>
+                </div>
+                <div class="p-6 mx-6 rounded-md profile-dark shadow-md">
+                    <p class="italic">
+                        <span>&#10077;</span>
+                        Beverly can turn her hand to all things digital. She has helped us with everything from Google ads, website dns updates, Articulate Rise content, email campaigns, linked in posts, capsule crm updates and been our technical support in the several apps we use in our small business. She is knowledgeable efficient, accurate and wonderful to work with. List all the apps you can turn your hand to to make you stand out from regular VA work.
+                        <span>&#10078;</span>
+                    </p>
+                    <p class="text-right uppercase text-neutral-400 text-xs">
+                        ROSEMARY KILLIP | FOUNDER OF BUILDING NETWORKS NZ
+                    </p>
+                </div>
+                <div class="p-6 mx-6 rounded-md profile-dark shadow-md">
+                    <p class="italic">
+                        <span>&#10077;</span>
+                        I highly recommend Beverly. As a contractor to Your Virtual Assistant, Beverly was very much a team player, always putting her hand up when someone needed support. She shines at quickly grasping new technology, we could throw her a task and she'd get up to speed quickly, always delivering the client's desired outcome. If you're looking for someone who is very people orientated, who consistently over delivers, who's a great communicator ... look no further. 
+                        <span>&#10078;</span>
+                    </p>
+                    <p class="text-right uppercase text-neutral-400 text-xs">
+                        JUSTINE PARSONS | FOUNDER OF YOUR VIRTUAL ASSISTANT NZ, FOUNDER OF THE LEVER NZ
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- pricing -->
+    <div class="py-40 container-fluid lg:py-64 lg:container" id="pricing">
+        <h2 class="fw-bold font-[Unbounded] display-5 text-center">
+            Support That Fits Your Budget
+        </h2>
+        <p class="text-center">
+            Three flexible tiers, priced to grow with you — real support, without agency-sized price tags. Each tier builds on the one before.
+            <br/>
+            <span class="dark-mode-text">
+                Open to both e-commerce and service-based businesses.
+            </span>
+        </p>
+        <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="p-6 dark-box shadow-md rounded-md transition duration-200 ease-in-out hover:scale-105">
+                <p class="text-center">
+                    <span class="px-4 py-1 text-xs text-center rounded-full bg-neutral-800 text-neutral-500 fw-bold uppercase">
+                        starter
+                    </span>
+                </p>
+                <p class="fw-bold font-[Unbounded] text-center text-xl">
+                    Operations Starter
+                </p>
+                <h3 class="text-center">
+                    <span class="fw-bold display-3">
+                        $1,200
+                    </span>
+                    <span class="text-sm text-neutral-400">
+                        NZD
+                    </span>
+                </h3>
+                <p class="text-neutral-400 text-center">
+                    30 hours / month
+                </p>
+                <br class="my-2">
+                <p class="lg:mx-10">
+                    <i class="fa-solid fa-circle-check text-sm dark-mode-text"></i>
+                    &nbsp;
+                    <span>
+                        Email management
+                    </span>
+                    <br class="my-2">
+                    <i class="fa-solid fa-circle-check text-sm dark-mode-text"></i>
+                    &nbsp;
+                    <span>
+                        Calendar scheduling & appointment setting
+                    </span>
+                    <br class="my-2">
+                    <i class="fa-solid fa-circle-check text-sm dark-mode-text"></i>
+                    &nbsp;
+                    <span>
+                        Data entry & organisation
+                    </span>
+                    <br class="my-2">
+                    <i class="fa-solid fa-circle-check text-sm dark-mode-text"></i>
+                    &nbsp;
+                    <span>
+                        Document preparation & formatting
+                    </span>
+                    <br class="my-2">
+                    <i class="fa-solid fa-circle-check text-sm dark-mode-text"></i>
+                    &nbsp;
+                    <span>
+                        Research — tools, products, solutions
+                    </span>
+                    <br class="my-2">
+                    <i class="fa-solid fa-circle-check text-sm dark-mode-text"></i>
+                    &nbsp;
+                    <span>
+                        Customer service & client communication
+                    </span>
+                </p>
+                <div class="mt-42 lg:mt-48 text-center">
+                    <a href="mailto:hello.beverlydigitaldoer@gmail.com?subject=Operations%20Starter&body=Hi%20Beverly%2C%0D%0A%0D%0AI'm%20interested%20in%20your%20Operations%20Starter%20package%20and%20would%20like%20to%20learn%20more%20or%20get%20started.%0D%0A%0D%0AHere's%20a%20bit%20about%20my%20business%3A%0D%0A%0D%0ABusiness%20name%3A%20%0D%0AWebsite%20%28if%20applicable%29%3A%20%0D%0AWhat%20I%20sell%20or%20offer%3A%20%0D%0AMy%20biggest%20admin%20challenge%20right%20now%3A%20%0D%0A%0D%0ALooking%20forward%20to%20hearing%20from%20you%21">
+                        <span class="fw-semibold dark-service-btn py-2 px-10 transition duration-200 ease-in-out">
+                            Get Started
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="p-6 popular-dark-box shadow-lg/90 shadow-[#fda4af] rounded-md transition duration-200 ease-in-out hover:scale-105">
+                <p class="text-center">
+                    <span class="px-4 py-1 text-xs text-center rounded-full dark-mode-btn fw-bold uppercase">
+                        most popular
+                    </span>
+                </p>
+                <p class="fw-bold font-[Unbounded] text-center text-xl">
+                    Operations Business
+                </p>
+                <h3 class="text-center">
+                    <span class="fw-bold display-3">
+                        $1,800
+                    </span>
+                    <span class="text-sm text-neutral-400">
+                        NZD
+                    </span>
+                </h3>
+                <p class="text-neutral-400 text-center">
+                    40 hours / month
+                </p>
+                <br class="my-2">
+                <p class="lg:mx-10">
+                    <i class="fa-solid fa-circle-check text-sm dark-mode-text"></i>
+                    &nbsp;
+                    <span class="fw-bold">
+                        Everything in Starter
+                    </span>
+                    <br class="my-2">
+                    <i class="fa-solid fa-circle-check text-sm dark-mode-text"></i>
+                    &nbsp;
+                    <span>
+                        Website updates — product or service listings, banners, pricing
+                    </span>
+                    <br class="my-2">
+                    <i class="fa-solid fa-circle-check text-sm dark-mode-text"></i>
+                    &nbsp;
+                    <span>
+                        Inventory tracking & supplier coordination 
+                    </span>
+                    <span class="text-xs text-neutral-400">
+                        (or service scheduling)
+                    </span>
+                    <br class="my-2">
+                    <i class="fa-solid fa-circle-check text-sm dark-mode-text"></i>
+                    &nbsp;
+                    <span>
+                        Order or job processing support
+                    </span>
+                    <br class="my-2">
+                    <i class="fa-solid fa-circle-check text-sm dark-mode-text"></i>
+                    &nbsp;
+                    <span>
+                        Coordination — marketing scheduling, email campaigns
+                    </span>
+                    <br class="my-2">
+                    <i class="fa-solid fa-circle-check text-sm dark-mode-text"></i>
+                    &nbsp;
+                    <span>
+                        Content coordination (using AI for copywriting)
+                    </span>
+                </p>
+                <div class="mt-24 text-center">
+                    <a href="mailto:hello.beverlydigitaldoer@gmail.com?subject=Operations%20Starter&body=Hi%20Beverly%2C%0D%0A%0D%0AI'm%20interested%20in%20your%20Operations%20Starter%20package%20and%20would%20like%20to%20learn%20more%20or%20get%20started.%0D%0A%0D%0AHere's%20a%20bit%20about%20my%20business%3A%0D%0A%0D%0ABusiness%20name%3A%20%0D%0AWebsite%20%28if%20applicable%29%3A%20%0D%0AWhat%20I%20sell%20or%20offer%3A%20%0D%0AMy%20biggest%20admin%20challenge%20right%20now%3A%20%0D%0A%0D%0ALooking%20forward%20to%20hearing%20from%20you%21">
+                        <span class="fw-semibold dark-mode-btn py-2 px-10">
+                            Get Started
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="p-6 dark-box shadow-md rounded-md transition duration-200 ease-in-out hover:scale-105">
+                <p class="text-center">
+                    <span class="px-4 py-1 text-xs text-center rounded-full bg-neutral-800 text-neutral-500 fw-bold uppercase">
+                        full support
+                    </span>
+                </p>
+                <p class="fw-bold font-[Unbounded] text-center text-xl">
+                    Operations Growth
+                </p>
+                <h3 class="text-center">
+                    <span class="fw-bold display-3">
+                        $3,000
+                    </span>
+                    <span class="text-sm text-neutral-400">
+                        NZD
+                    </span>
+                </h3>
+                <p class="text-neutral-400 text-center">
+                    60 hours / month
+                </p>
+                <br class="my-2">
+                <p class="lg:mx-10">
+                    <i class="fa-solid fa-circle-check text-sm dark-mode-text"></i>
+                    &nbsp;
+                    <span class="fw-bold">
+                        Everything in Business
+                    </span>
+                    <br class="my-2">
+                    <i class="fa-solid fa-circle-check text-sm dark-mode-text"></i>
+                    &nbsp;
+                    <span>
+                        Tech management — DNS fixes, platform troubleshooting
+                    </span>
+                    <br class="my-2">
+                    <i class="fa-solid fa-circle-check text-sm dark-mode-text"></i>
+                    &nbsp;
+                    <span>
+                        Website maintenance & security checks
+                    </span>
+                    <br class="my-2">
+                    <i class="fa-solid fa-circle-check text-sm dark-mode-text"></i>
+                    &nbsp;
+                    <span>
+                        Full project management (Agile/Scrum approach)
+                    </span>
+                    <br class="my-2">
+                    <i class="fa-solid fa-circle-check text-sm dark-mode-text"></i>
+                    &nbsp;
+                    <span>
+                        Research — tools, products, solutions
+                    </span>
+                    <br class="my-2">
+                    <i class="fa-solid fa-circle-check text-sm dark-mode-text"></i>
+                    &nbsp;
+                    <span>
+                        End-to-end coordination — your operational right hand
+                    </span>
+                    <br class="my-2">
+                    <i class="fa-solid fa-circle-check text-sm dark-mode-text"></i>
+                    &nbsp;
+                    <span>
+                        Priority response & dedicated support
+                    </span>
+                </p>
+                <div class="mt-20 text-center">
+                    <a href="mailto:hello.beverlydigitaldoer@gmail.com?subject=Operations%20Starter&body=Hi%20Beverly%2C%0D%0A%0D%0AI'm%20interested%20in%20your%20Operations%20Starter%20package%20and%20would%20like%20to%20learn%20more%20or%20get%20started.%0D%0A%0D%0AHere's%20a%20bit%20about%20my%20business%3A%0D%0A%0D%0ABusiness%20name%3A%20%0D%0AWebsite%20%28if%20applicable%29%3A%20%0D%0AWhat%20I%20sell%20or%20offer%3A%20%0D%0AMy%20biggest%20admin%20challenge%20right%20now%3A%20%0D%0A%0D%0ALooking%20forward%20to%20hearing%20from%20you%21">
+                        <span class="fw-semibold dark-service-btn py-2 px-10 transition duration-200 ease-in-out">
+                            Get Started
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- contact -->
+    <div class="py-40 secondary-dark-mode font-[Poppins]" id="contact">
+        <div class="container-fluid lg:container">
+            <h2 class="display-5 fw-bold font-[Unbounded] text-center">
+                Let's Get You Out From Under It All
+            </h2>
+            <p class="text-center">
+                If any of this sounds like where you're at right now — the backlog, the overwhelm, doing it all alone — let's have a no-pressure conversation about what's actually going on, and whether I can help.
+            </p>
+            <br class="py-3">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
                     <p>
-                        <b>
-                            Important Links
-                        </b>
+                        <span class="fw-bold">
+                            Tell me what's piling up.
+                        </span>
+                        Fill in the following form, or click my email below to reach me directly — no hard sell, just an honest conversation about where things are at and what support would actually look like.
                     </p>
                     <p>
-                        <a href="./pages/terms and conditions.html">
+                        <i class="fa-solid fa-envelope text-sm dark-mode-text"></i>
+                        &nbsp;
+                        <a href="mailto:hello.beverlydigitaldoer@gmail.com?subject=General%20Enquiry&body=Hi%20Beverly%2C%0D%0A%0D%0AI%20have%20a%20general%20enquiry%20about%20your%20services.%0D%0A%0D%0AMy%20name%20is%3A%20%0D%0A%0D%0AMy%20enquiry%20is%3A%20%0D%0A%0D%0AThanks%2C%0D%0A">
+                            hello.beverlydigitaldoer@gmail.com
+                        </a>
+                        <br class="my-2">
+                        <i class="fa-solid fa-location-dot text-sm dark-mode-text"></i>
+                        &nbsp;
+                        <span>
+                            New Plymouth, Taranaki, New Zealand
+                        </span>
+                    </p>
+                </div>
+                <div>
+                    <!-- contact form -->
+                    <form id="contactForm">
+                        <input class="shadow-md dark-box rounded-md pl-2 pr-10 py-1 my-1 transition duration-200 ease-in-out" type="text" id="name" placeholder="Your Name" required />
+                        <br />
+                        <input class="shadow-md dark-box rounded-md pl-2 pr-10 py-1 my-1 transition duration-200 ease-in-out" type="email" id="email" placeholder="Your Email" required />
+                        <br />
+                        <input class="shadow-md dark-box rounded-md pl-2 pr-10 py-1 my-1 transition duration-200 ease-in-out" type="text" id="business" placeholder="Business Name (or URL)" required />
+                        <br />
+                        <textarea class="shadow-md dark-box rounded-md pl-2 pr-10 py-1 my-1 transition duration-200 ease-in-out" id="message" rows="6" placeholder="What is the biggest admin challenge you are facing right now and why?" required></textarea>
+                        <br class="my-2">
+                        <button type="submit" class="py-2 px-3 dark-mode-btn fw-semibold transition duration-200 ease-in-out hover:scale-102">
+                            Send Message
+                        </button>
+                    </form>
+
+                    <!-- confirmation modal -->
+                    <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content dark-mode p-6">
+                                <div class="modal-body">
+                                    <h4 class="modal-title fw-bold font-[Unbounded] text-center">
+                                        Confirm Your Message
+                                    </h4>
+                                    <br class="my-2">
+                                    <p>
+                                        <span class="fw-semibold text-sm">Name:</span>
+                                        <span id="previewName" class="text-sm"></span>
+                                    </p>
+                                    <p>
+                                        <span class="fw-semibold">Email:</span>
+                                        <span id="previewEmail"></span>
+                                    </p>
+                                    <p>
+                                        <span class="fw-semibold">Business:</span>
+                                        <span id="previewBusiness"></span>
+                                    </p>
+                                    <p>
+                                        <span class="fw-semibold">
+                                            The biggest admin challenge you are facing right now and why:
+                                        </span>
+                                        <span id="previewMessage"></span>
+                                    </p>
+                                    <br class="py-2">
+                                    <p class="text-neutral-400 text-center text-xs">
+                                        This will open your email client to send this message.
+                                    </p>
+                                    <div class="grid grid-cols-2 gap-4 content-center">
+                                        <div>
+                                            <button class="font-semibold py-2 px-3 border-2 border-[#171717]" data-bs-dismiss="modal">
+                                                Cancel
+                                            </button>
+                                        </div>
+                                        <div class="grid justify-end">
+                                            <button class="font-semibold dark-mode-btn py-2 px-3 transition duration-200 ease-in-out" id="confirmSendBtn" data-bs-dismiss="modal">
+                                                Send Email
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="py-2 font-[Poppins]">
+        <div class="container-fluid">
+            <div class="grid grid-cols-3">
+                <div class="text-neutral-400 text-xs content-center">
+                    <span>
+                        ©
+                    </span>
+                    <span id="currentYear"></span>
+                    <span>
+                        Beverly Ann Gupit · E-commerce Admin Specialist · Open to Digital Businesses
+                    </span>
+                </div>
+                <div class="text-center content-center text-xs">
+                    <span>
+                        <a href="./pages/terms.html">
                             Terms and Conditions
                         </a>
-                    </p>
-                    <p>
-                        <a href="./pages/privacy policy.html">
+                    </span>
+                    <br />
+                    <span>
+                        <a href="./pages/privacy.html">
                             Privacy Policy
                         </a>
-                    </p>
-                    <p>
-                        <a href="" title="coming soon">
-                            FAQs
+                    </span>
+                </div>
+                <div class="text-right content-center">
+                    <span>
+                        <a href="https://www.linkedin.com/in/beverly-ann-gupit/" target="_blank" title="Let's connect">
+                            <i class="fa-brands fa-linkedin dark-mode-text px-2"></i>
                         </a>
-                    </p>
-                    <br/>
-                    <p>
-                        <b>
-                            Follow Me
-                        </b>
-                    </p>
-                    <div class="flex flex-row gap-4 justify-center">
-                        <div class="basis-8">
-                            <a href="https://www.instagram.com/beverlygupit" target="_blank" rel="noopener noreferrer">
-                                <img src="./images/BG Website Icon_Instagram.svg" alt="instagram" class="mx-auto" width="20px">
-                            </a>
-                        </div>
-                        <div class="basis-8">
-                            <a href="https://www.linkedin.com/in/beverly-ann-gupit/" target="_blank" rel="noopener noreferrer">
-                                <img src="./images/BG Website Icon_Linkedin.svg" alt="linkedin" class="mx-auto" width="20px">
-                            </a>
-                        </div>
-                    </div>
+                    </span>
                 </div>
             </div>
-            <div class="pt-3 text-center text-sm">
-                © 2024 
-                <a href="./index.html">bevzay.github.io</a>
-            </div>
         </div>
-    <!---->
+    </div>
+    <script>
+        const body = document.body;
+        const lightBtn = document.getElementById('lightBtn');
+        const darkBtn = document.getElementById('darkBtn');
+
+        // Images
+        const logo = document.getElementById('myLogo');
+        const dayNight = document.getElementById('dayNightLogo');
+        const menu = document.getElementById('myMenu');
+
+        // ===  theme toggle ===
+        function setTheme(theme) {
+            if (theme === 'light') {
+
+                body.classList.replace('dark-mode', 'light-mode');
+
+                // Replace secondary-dark-mode → secondary-light-mode
+                document.querySelectorAll('.secondary-dark-mode').forEach(function (el) {
+                    el.classList.replace('secondary-dark-mode', 'secondary-light-mode');
+                });
+
+                // Replace dark-mode-text → light-mode-text
+                document.querySelectorAll('.dark-mode-text').forEach(function (el) {
+                    el.classList.replace('dark-mode-text', 'light-mode-text');
+                });
+
+                // Replace dark-mode-btn → light-mode-btn
+                document.querySelectorAll('.dark-mode-btn').forEach(function (el) {
+                    el.classList.replace('dark-mode-btn', 'light-mode-btn');
+                });
+
+                // Replace dark-box → light-box
+                document.querySelectorAll('.dark-box').forEach(function (el) {
+                    el.classList.replace('dark-box', 'light-box');
+                    el.classList.replace('hover:shadow-[#fda4af]', 'hover:shadow-[#8b5cf6]');
+                });
+
+                // Replace profile-dark → profile-light
+                document.querySelectorAll('.profile-dark').forEach(function (el) {
+                    el.classList.replace('profile-dark', 'profile-light');
+                });
+
+                // Replace popular-dark-box → popular-light-box
+                document.querySelectorAll('.popular-dark-box').forEach(function (el) {
+                    el.classList.replace('popular-dark-box', 'popular-light-box');
+                    el.classList.replace('shadow-[#fda4af]', 'shadow-[#8b5cf6]');
+                });
+
+                // Replace bg-neutral-800 → bg-neutral-200
+                document.querySelectorAll('.bg-neutral-800').forEach(function (el) {
+                    el.classList.replace('bg-neutral-800', 'bg-neutral-200');
+                });
+
+                // Replace dark-service-btn → light-service-btn
+                document.querySelectorAll('.dark-service-btn').forEach(function (el) {
+                    el.classList.replace('dark-service-btn', 'light-service-btn');
+                });
+
+                // Images
+                if (logo) logo.src = './images/horizontal logo_black.png';
+                if (dayNight) dayNight.src = './images/day.png';
+                if (menu) menu.src = './images/menu_black.png';
+
+            } else {
+
+                body.classList.replace('light-mode', 'dark-mode');
+
+                // Replace secondary-light-mode → secondary-dark-mode
+                document.querySelectorAll('.secondary-light-mode').forEach(function (el) {
+                    el.classList.replace('secondary-light-mode', 'secondary-dark-mode');
+                });
+
+                // Replace light-mode-text → dark-mode-text
+                document.querySelectorAll('.light-mode-text').forEach(function (el) {
+                    el.classList.replace('light-mode-text', 'dark-mode-text');
+                });
+
+                // Replace light-mode-btn → dark-mode-btn
+                document.querySelectorAll('.light-mode-btn').forEach(function (el) {
+                    el.classList.replace('light-mode-btn', 'dark-mode-btn');
+                });
+
+                // Replace light-box → dark-box
+                document.querySelectorAll('.light-box').forEach(function (el) {
+                    el.classList.replace('light-box', 'dark-box');
+                    el.classList.replace('hover:shadow-[#8b5cf6]', 'hover:shadow-[#fda4af]');
+                });
+
+                //Replace profile-light → profile-dark
+                document.querySelectorAll('.profile-light').forEach(function (el) {
+                    el.classList.replace('profile-light', 'profile-dark');
+                });
+
+                //Replace popular-light-box → popular-dark-box
+                document.querySelectorAll('.popular-light-box').forEach(function (el) {
+                    el.classList.replace('popular-light-box', 'popular-dark-box');
+                    el.classList.replace('shadow-[#8b5cf6]', 'shadow-[#fda4af]');
+                });
+
+                // Replace bg-neutral-200 → bg-neutral-800
+                document.querySelectorAll('.bg-neutral-200').forEach(function (el) {
+                    el.classList.replace('bg-neutral-200', 'bg-neutral-800');
+                });
+
+                // Replace light-service-btn → dark-service-btn
+                document.querySelectorAll('.light-service-btn').forEach(function (el) {
+                    el.classList.replace('light-service-btn', 'dark-service-btn');
+                });
+
+                // Images
+                if (logo) logo.src = './images/horizontal logo_white.png';
+                if (dayNight) dayNight.src = './images/night.png';
+                if (menu) menu.src = './images/menu_white.png';
+
+            }
+        }
+
+        if (lightBtn) {
+            lightBtn.addEventListener('click', function () {
+                setTheme('light');
+            });
+        }
+
+        if (darkBtn) {
+            darkBtn.addEventListener('click', function () {
+                setTheme('dark');
+            })
+        }
+
+
+        // === contact form ===
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            if (!form) return;
+
+            // Get modal element
+            const modalElement = document.getElementById('confirmModal');
+            if (!modalElement) return;
+
+            // Initialise Bootstrap modal
+            const modal = new bootstrap.Modal(modalElement);
+
+            // Get preview elements
+            const previewName = document.getElementById('previewName');
+            const previewEmail = document.getElementById('previewEmail');
+            const previewBusiness = document.getElementById('previewBusiness');
+            const previewMessage = document.getElementById('previewMessage');
+
+            // Get confirm button
+            const confirmBtn = document.getElementById('confirmSendBtn');
+
+            // Store form data
+            let formData = {};
+
+            // Name validation
+            function isValidName(name) {
+                return /^[A-Za-z\s]+$/.test(name);
+            }
+
+            // Email validation
+            function isValidEmail(email)  {
+                return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+            }
+
+
+            // Handle form submission
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const business = document.getElementById('business').value.trim();
+                const message = document.getElementById('message').value.trim();
+
+                // Check name (letters and spaces only)
+                if (!isValidName(name)) {
+                    alert('Please enter a valid name (letters and spaces only).');
+                    return;
+                }
+
+                // Check email format
+                if (!isValidEmail(email)) {
+                    alert('Please enter a valid email address (e.g., name@example.com).');
+                    return;
+                }
+
+                // Store data
+                formData = { name, email, business, message };
+
+                // Update modal preview
+                previewName.textContent = name;
+                previewEmail.textContent = email;
+                previewBusiness.textContent = business;
+                previewMessage.textContent = message;
+
+                // Clear the form
+                document.getElementById('name').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('business').value = '';
+                document.getElementById('message').value = '';
+
+                // Show modal
+                modal.show();
+            });
+
+            // Handle confirm send
+            confirmBtn.addEventListener('click', function() {
+                const  { name, email, business, message } = formData;
+
+                const body = encodeURIComponent(
+                    'Name: ' + name + '%0D%0A' +
+                    'Email: ' + email + '%0D%0A' +
+                    'Business: ' + business + '%0D%0A%0D%0A' +
+                    'The biggest admin challenge you are facing right now and why:%0D%0A' + message
+                );
+
+                window.location.href = 'mailto:hello.beverlydigitaldoer@gmail.com?subject=Admin%20Help%20Enquiry&body=' + body;
+
+                formData ={};
+            });
+
+        });
+
+        // === auto-year in footer ===
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    </script>
 </body>
 </html>
