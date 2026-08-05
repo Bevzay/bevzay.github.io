@@ -144,7 +144,7 @@
                         I take the admin weight off your shoulders so you can focus on growing your business.
                     </p>
                     <a href="#pricing">
-                        <button class="py-2 px-3 dark-mode-btn fw-semibold shadow-md transition duration-200 ease-in-out hover:scale-105 hover:shadow-xl/20">
+                        <button class="py-2 px-3 rounded-full dark-mode-btn fw-semibold shadow-md transition duration-200 ease-in-out hover:scale-105 hover:shadow-xl/20">
                             Let's Simplify Your Business
                         </button>
                     </a>
@@ -279,9 +279,15 @@
                     — all in one person.
                 </p>
                 <br />
-                <p class="dark-mode-text fw-bold pt-2">
-                    If that sounds like you, let's talk.
+                <p class="dark-mode-text fw-bold">
+                    If that sounds like you
                 </p>
+                <a href="#contact">
+                    <button class="py-2 px-3 rounded-full dark-mode-btn fw-semibold shadow-md transition duration-200 ease-in-out hover:scale-105 hover:shadow-xl/20">
+                        Let's Talk
+                    </button>
+                </a>
+                <br class="my-6">
             </div>
             <div>
                 <div class="p-6 mx-6 rounded-md profile-dark shadow-lg">
@@ -865,7 +871,7 @@
                     </span>
                 </p>
                 <div class="mt-24 text-center">
-                    <a href="mailto:hello.beverlydigitaldoer@gmail.com?subject=Operations%20Starter&body=Hi%20Beverly%2C%0D%0A%0D%0AI'm%20interested%20in%20your%20Operations%20Starter%20package%20and%20would%20like%20to%20learn%20more%20or%20get%20started.%0D%0A%0D%0AHere's%20a%20bit%20about%20my%20business%3A%0D%0A%0D%0ABusiness%20name%3A%20%0D%0AWebsite%20%28if%20applicable%29%3A%20%0D%0AWhat%20I%20sell%20or%20offer%3A%20%0D%0AMy%20biggest%20admin%20challenge%20right%20now%3A%20%0D%0A%0D%0ALooking%20forward%20to%20hearing%20from%20you%21">
+                    <a href="mailto:hello.beverlydigitaldoer@gmail.com?subject=Operations%20Business&body=Hi%20Beverly%2C%0D%0A%0D%0AI'm%20interested%20in%20your%20Operations%20Business%20package%20and%20would%20like%20to%20learn%20more%20or%20get%20started.%0D%0A%0D%0AHere's%20a%20bit%20about%20my%20business%3A%0D%0A%0D%0ABusiness%20name%3A%20%0D%0AWebsite%20%28if%20applicable%29%3A%20%0D%0AWhat%20I%20sell%20or%20offer%3A%20%0D%0AMy%20biggest%20admin%20challenge%20right%20now%3A%20%0D%0A%0D%0ALooking%20forward%20to%20hearing%20from%20you%21">
                         <span class="fw-semibold dark-mode-btn py-2 px-10">
                             Get Started
                         </span>
@@ -937,7 +943,7 @@
                     </span>
                 </p>
                 <div class="mt-20 text-center">
-                    <a href="mailto:hello.beverlydigitaldoer@gmail.com?subject=Operations%20Starter&body=Hi%20Beverly%2C%0D%0A%0D%0AI'm%20interested%20in%20your%20Operations%20Starter%20package%20and%20would%20like%20to%20learn%20more%20or%20get%20started.%0D%0A%0D%0AHere's%20a%20bit%20about%20my%20business%3A%0D%0A%0D%0ABusiness%20name%3A%20%0D%0AWebsite%20%28if%20applicable%29%3A%20%0D%0AWhat%20I%20sell%20or%20offer%3A%20%0D%0AMy%20biggest%20admin%20challenge%20right%20now%3A%20%0D%0A%0D%0ALooking%20forward%20to%20hearing%20from%20you%21">
+                    <a href="mailto:hello.beverlydigitaldoer@gmail.com?subject=Operations%20Growth&body=Hi%20Beverly%2C%0D%0A%0D%0AI'm%20interested%20in%20your%20Operations%20Growth%20package%20and%20would%20like%20to%20learn%20more%20or%20get%20started.%0D%0A%0D%0AHere's%20a%20bit%20about%20my%20business%3A%0D%0A%0D%0ABusiness%20name%3A%20%0D%0AWebsite%20%28if%20applicable%29%3A%20%0D%0AWhat%20I%20sell%20or%20offer%3A%20%0D%0AMy%20biggest%20admin%20challenge%20right%20now%3A%20%0D%0A%0D%0ALooking%20forward%20to%20hearing%20from%20you%21">
                         <span class="fw-semibold dark-service-btn py-2 px-10 transition duration-200 ease-in-out">
                             Get Started
                         </span>
@@ -1025,11 +1031,11 @@
                                     </p>
                                     <br class="py-2">
                                     <p class="text-neutral-400 text-center text-xs">
-                                        This will open your email client to send this message.
+                                        By clicking "Send Email", you agree to our <a href="./pages/privacy.html" class="dark-mode-text">Privacy Policy</a> and confirm that you'd like to open your email client to send this message. Your information will be handled securely.
                                     </p>
                                     <div class="grid grid-cols-2 gap-4 content-center">
                                         <div>
-                                            <button class="font-semibold py-2 px-3 border-2 border-[#171717]" data-bs-dismiss="modal">
+                                            <button class="font-semibold py-2 px-3 dark-service-btn border-2 border-[#171717] transition duration-200 ease-in-out" data-bs-dismiss="modal">
                                                 Cancel
                                             </button>
                                         </div>
@@ -1248,7 +1254,6 @@
                 return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
             }
 
-
             // Handle form submission
             form.addEventListener('submit', function(event) {
                 event.preventDefault();
@@ -1260,13 +1265,13 @@
 
                 // Check name (letters and spaces only)
                 if (!isValidName(name)) {
-                    alert('Please enter a valid name (letters and spaces only).');
+                    alert('Please enter a valid name (letters and spaces only)');
                     return;
                 }
 
                 // Check email format
                 if (!isValidEmail(email)) {
-                    alert('Please enter a valid email address (e.g., name@example.com).');
+                    alert('Please enter a valid email address (e.g., name@example.com)');
                     return;
                 }
 
