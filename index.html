@@ -1298,12 +1298,16 @@
             confirmBtn.addEventListener('click', function() {
                 const  { name, email, business, message } = formData;
 
-                const body = encodeURIComponent(
-                    'Name: ' + name + '%0D%0A' +
-                    'Email: ' + email + '%0D%0A' +
-                    'Business: ' + business + '%0D%0A%0D%0A' +
-                    'The biggest admin challenge you are facing right now and why:%0D%0A' + message
-                );
+                const rawBody  = 
+                    'Name: ' + name + '\r\n' +
+                    'Email: ' + email + '\r\n' +
+                    'Business: ' + business + '\r\n\r\n' +
+                    'The biggest admin challenge you are facing right now and why:\r\n' + message;
+
+                const body = rawBody
+                    .replace(/ /g, '%20')
+                    .replace(/\r\n/g, '%0D%0A')
+                    .replace(/\n/g, '%0D%0A');
 
                 window.location.href = 'mailto:hello.beverlydigitaldoer@gmail.com?subject=Admin%20Help%20Enquiry&body=' + body;
             });
