@@ -1,6 +1,6 @@
-# Allow all crawlers to access everything
+# Allow all good crawlers (search engines, AI, etc.)
 User-agent: *
 Allow: /
 
-# Tell crawlers where to find your sitemap
+# Point to your sitemap
 Sitemap: https://bevzay.github.io/sitemap.xml
